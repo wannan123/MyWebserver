@@ -59,6 +59,7 @@
     "cstring": "cpp",
     "cstdlib": "cpp",
     "*.tcc": "cpp",
-    "fstream": "cpp"
+    "fstream": "cpp",
+    "cerrno": "cpp"
   }
 }
