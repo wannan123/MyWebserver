@@ -5,14 +5,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include "util.h"
 using namespace std;
-void error(int flag,const char * c){
-    if (flag == -1)
-    {
-        perror(c);
-        exit(EXIT_FAILURE);
-    }
-}
+
 
 int main(int argc, const char** argv) {
     int sockfd = socket(AF_INET, SOCK_STREAM, 0);

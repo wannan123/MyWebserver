@@ -9,10 +9,11 @@ class Epoll
     private:
         int epollfd;
         struct epoll_event ev;
-        struct epoll_event events[MAX_NUM];
+        struct epoll_event *events;
     public:
-        void addFd(int fd, int type);
+        void addFd(int fd, uint32_t type);
         std::vector<struct epoll_event> poll();
+        void clear();
         Epoll();
         ~Epoll();
 };

@@ -16,9 +16,8 @@ class Socket
         Epoll *ep;
         void bind(InetAddress *address);
         void listen();
+        void setnonblocking();
         int accept(InetAddress *fd);
-        void setnonblocking(int clnt_sockfd);
-        void do_use_fd(int fd);
         int getFd();
         Socket();
         ~Socket();

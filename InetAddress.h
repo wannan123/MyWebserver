@@ -7,7 +7,8 @@ class InetAddress
     public:
         struct sockaddr_in sock_add;
     public:
-        InetAddress(std::string ip, int port);
+        InetAddress(const char* ip, uint16_t port);
+        InetAddress();
         ~InetAddress();
 };
 
