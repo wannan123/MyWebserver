@@ -8,6 +8,7 @@
 #include <sys/epoll.h>
 #include <errno.h>
 #include <fcntl.h>
+#include "Socket.h"
 #define MAX_EVENTS 10
 using namespace std;
 void error(int flag,const char * c){
@@ -56,19 +57,26 @@ void do_use_fd(int fd){
     }
 }
 int main(int argc, const char** argv) {
+
+    Socket *serv_sock = new Socket();
     int sockfd = socket(AF_INET, SOCK_STREAM, 0);
     error(sockfd,"socket create error");
     //sockaddr_in是专用socket地址，若用sockaddr则会有一些位移操作很麻烦。
-
+    InetAddress *serv_addr = new InetAddress("127.0.0.1", 8888);
     struct sockaddr_in sock_add;
     bzero(&sock_add, sizeof(sock_add));
     sock_add.sin_family = AF_INET;
     sock_add.sin_addr.s_addr = INADDR_ANY;//主机字节序（小端）转网络字节序（大端）
     sock_add.sin_port = htons(8888);
     //绑定sockfd文件描述符
+
+    serv_sock->bind(serv_addr);
+    serv_sock->listen();  
     error(bind(sockfd,(sockaddr*)&sock_add,sizeof(sock_add)),"bind error");
     error(listen(sockfd, SOMAXCONN),"listen error");
+
     //添加epoll
+    Epoll *ep = new Epoll();
     int epollfd = epoll_create1(0);
     
     if (epollfd == -1) {
@@ -80,6 +88,8 @@ int main(int argc, const char** argv) {
     bzero(&ev, sizeof(ev));
     ev.events = EPOLLIN;
     ev.data.fd = sockfd;
+
+    ep->addFd(serv_sock->getFd(), EPOLLIN | EPOLLET);
     error(epoll_ctl(epollfd, EPOLL_CTL_ADD, sockfd, &ev),"epoll_ctl: add severfd error");//将服务器fd添加到epoll树上。
 
     //创建用于监听的描述符
@@ -103,6 +113,8 @@ int main(int argc, const char** argv) {
                 error(epoll_ctl(epollfd, EPOLL_CTL_ADD, clnt_sockfd,&ev) == -1,"epoll_ctl: add clnt_sockfd error");
             }else if(events[i].events & EPOLLIN){
                 do_use_fd(events[i].data.fd);
+                bzero(&events, sizeof(events));
+                bzero(&ev, sizeof(ev));
             }else{
                 cout<<"something else happened"<<endl;
             }
