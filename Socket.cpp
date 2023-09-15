@@ -19,8 +19,8 @@ void Socket::setnonblocking(){
     fcntl(sockfd, F_SETFL, fcntl(sockfd, F_GETFL) | O_NONBLOCK);
 }
 int Socket::accept(InetAddress *clnt_addr) {
-    socklen_t clnt_addr_len = sizeof(clnt_addr);
-    int clnt_sockfd = ::accept(sockfd, (sockaddr *)&clnt_addr, &clnt_addr_len);
+    socklen_t clnt_addr_len = sizeof(clnt_addr->sock_add);
+    int clnt_sockfd = ::accept(sockfd, (sockaddr *)&clnt_addr->sock_add, &clnt_addr_len);
     cout<<"new client fd"<<clnt_sockfd<<",IP: "<<inet_ntoa(clnt_addr->sock_add.sin_addr)<<" Port: "<<ntohs(clnt_addr->sock_add.sin_port)<<endl;
     return clnt_sockfd;
 }

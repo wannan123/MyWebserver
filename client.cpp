@@ -16,8 +16,8 @@ int main(int argc, const char** argv) {
 
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
-    serv_addr.sin_port = htons(8888);
-    connect(sockfd, (sockaddr*)&serv_addr, sizeof(serv_addr));  
+    serv_addr.sin_port = htons(8880);
+    error(connect(sockfd, (sockaddr*)&serv_addr, sizeof(serv_addr)),"connect error");  
 
     while(true){
         char buffer[1024];     //定义缓冲区
