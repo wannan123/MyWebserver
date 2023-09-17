@@ -20,6 +20,7 @@ class Socket
         int accept(InetAddress *fd);
         int getFd();
         Socket();
+        Socket(int fd);
         ~Socket();
 };
 

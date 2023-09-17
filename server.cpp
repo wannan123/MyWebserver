@@ -8,6 +8,7 @@
 #include "Epoll.h"
 #include "InetAddress.h"
 #include "Socket.h"
+#include "Channel.h"
 
 #define MAX_EVENTS 10
 using namespace std;
@@ -26,24 +27,27 @@ int main(int argc, const char** argv) {
     //添加epoll
     Epoll *ep = new Epoll();
     serv_sock->setnonblocking();
-    ep->addFd(serv_sock->getFd(), EPOLLIN | EPOLLET);
+
+    Channel *channel = new Channel(ep,serv_sock->getFd());
+    channel->enableReading();
     
     //创建用于监听的描述符
     for(;;){
         //epoll树开始监听，若有准备就绪文件描述符，则写入events内
-        vector<struct epoll_event> ready =  ep->poll();
+        vector<Channel*> ready =  ep->poll();
         int nfds = ready.size();
         for (int i = 0; i < nfds; ++i)
         {
-            if(ready[i].data.fd == serv_sock->getFd()){//说明服务器fd就绪，有客户端发送请求
+            if(ready[i]->getFd() == serv_sock->getFd()){//说明服务器fd就绪，有客户端发送请求
 
                 InetAddress *serv_addr = new InetAddress();
-                int clnt_sockfd = serv_sock->accept(serv_addr);
-                setnonblocking(clnt_sockfd);
-                ep->addFd(clnt_sockfd, EPOLLIN | EPOLLET);
+                Socket *clnt_sockfd =new Socket(serv_sock->accept(serv_addr));
+                clnt_sockfd->setnonblocking();
+                Channel *channel = new Channel(ep,clnt_sockfd->getFd());
+                channel->enableReading();
 
-            }else if(ready[i].events & EPOLLIN){
-                do_use_fd(ready[i].data.fd);
+            }else if(ready[i]->getRevents() & EPOLLIN){
+                do_use_fd(ready[i]->getFd());
                 ep->clear();
             }else{
                 cout<<"something else happened"<<endl;

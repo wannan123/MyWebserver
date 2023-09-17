@@ -4,6 +4,9 @@
 Socket::Socket(){
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     error(sockfd,"socket create error");
+}Socket::Socket(int fd){
+    sockfd = fd;
+    error(sockfd,"socket create error");
 }
 void Socket::bind(InetAddress *address) {
     error(::bind(sockfd,(sockaddr*)&address->sock_add,sizeof(address->sock_add)),"bind error");

@@ -3,7 +3,9 @@
 #include <vector>
 #include <strings.h>
 #include "util.h"
+#include "Channel.h"
 #define MAX_NUM 10
+class Channel;
 class Epoll
 {
     private:
@@ -11,8 +13,9 @@ class Epoll
         struct epoll_event ev;
         struct epoll_event *events;
     public:
-        void addFd(int fd, uint32_t type);
-        std::vector<struct epoll_event> poll();
+        void addFd(int fd, uint32_t op);
+        std::vector<Channel*> poll();
+        void updateChannel(Channel * Channel);
         void clear();
         Epoll();
         ~Epoll();
