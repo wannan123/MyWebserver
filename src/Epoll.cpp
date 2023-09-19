@@ -49,9 +49,10 @@ Epoll::Epoll():epollfd(-1), events(nullptr) {
     bzero(events, sizeof(*events) * MAX_NUM);//这里第一个参数events是个指针，如果用&event的话就是个二级指针了。
 }
 
-
-
-
-
-
-
+Epoll::~Epoll() {
+    if(epollfd != -1){
+        close(epollfd);
+        epollfd = -1;
+    }
+    delete [] events;
+}
