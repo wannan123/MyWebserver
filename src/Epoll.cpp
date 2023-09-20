@@ -14,6 +14,7 @@ void Epoll::addFd(int fd, uint32_t op) {
 std::vector<Channel*> Epoll::poll() {
     std::vector<Channel*> activeEvents;
     int nfds = epoll_wait(epollfd, events, MAX_NUM, -1);
+    cout<<"123"<<endl;
     error(nfds, "epoll wait error");
     for(int i = 0; i < nfds; ++i){
         Channel *c = (Channel*)events[i].data.ptr;
