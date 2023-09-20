@@ -1,7 +1,7 @@
 #include "Server.h"
-Server::Server(Eventloop* ep){
+Server::Server(Eventloop* ep):ep(ep){
     Socket *serv_sock = new Socket();
-    InetAddress *serv_addr = new InetAddress("127.0.0.1", 8880);
+    InetAddress *serv_addr = new InetAddress("127.0.0.1", 8870);
 
     //绑定sockfd文件描述符
     serv_sock->bind(serv_addr);
@@ -14,6 +14,7 @@ Server::Server(Eventloop* ep){
     std::function<void()> c = std::bind(&Server::newConnection,this,serv_sock);
     channel->setCallback(c);
     channel->enableReading();
+    
 }
 
 Server::~Server(){
@@ -54,4 +55,5 @@ void Server::newConnection(Socket *serv_sock) {
     std::function<void()> c = std::bind(&Server::handleReadEvent,this,clnt_sockfd->getFd());
     channel->setCallback(c);
     channel->enableReading();
+    
 }

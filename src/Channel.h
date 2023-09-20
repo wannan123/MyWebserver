@@ -3,7 +3,7 @@
 #include "Eventloop.h"
 #include <iostream>
 #include <functional>
-class Epoll;//前向声明
+// class Epoll;//前向声明
 class Channel
 {
     private:

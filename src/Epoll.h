@@ -10,13 +10,13 @@ class Epoll
 {
     private:
         int epollfd;
-        struct epoll_event ev;
+        //struct epoll_event ev;
         struct epoll_event *events;
     public:
         void addFd(int fd, uint32_t op);
         std::vector<Channel*> poll();
         void updateChannel(Channel * Channel);
-        void clear();
+        //void clear();
         Epoll();
         ~Epoll();
 };

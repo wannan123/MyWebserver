@@ -2,7 +2,8 @@
 #include "Eventloop.h"
 #include "Channel.h"
 #include <vector>
-Eventloop::Eventloop():ep_(nullptr),quit(false){
+Eventloop::Eventloop():ep_(nullptr), quit(false){
+    ep_ = new Epoll();
 }
 
 Eventloop::~Eventloop(){
