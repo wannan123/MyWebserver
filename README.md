@@ -1,6 +1,7 @@
 # MyWebserver
 
 Learning from 30dayMakeCppServer1.
+
 ------
 
 #### day1
@@ -18,6 +19,7 @@ Learning from 30dayMakeCppServer1.
 ###### 3、bind，listen，accept的是否将信息写入内核文件描述符：
 
 答：对的，在一开始socket创建描述符时就是在内核中创建的，返回的是文件描述符，我们可以利用这个文件描述符来去操作内核，这3个函数正好可以对其进行操作。
+
 ------
 #### day2
 
@@ -46,6 +48,7 @@ Learning from 30dayMakeCppServer1.
 ###### 6、什么是文件描述符：
 
 答：Linux一切皆为文件，不管是socket还是其他文件，如果创建进程，则会有很多文件来表示这个进程，每个文件有一个代号，及文件描述符。
+
 ------
 #### day3
 
