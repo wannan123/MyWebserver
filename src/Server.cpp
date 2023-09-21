@@ -1,20 +1,8 @@
 #include "Server.h"
 Server::Server(Eventloop* ep):ep(ep){
-    Socket *serv_sock = new Socket();
-    InetAddress *serv_addr = new InetAddress("127.0.0.1", 8870);
-
-    //绑定sockfd文件描述符
-    serv_sock->bind(serv_addr);
-    serv_sock->listen();  
-
-    //添加epoll
-    serv_sock->setnonblocking();
-
-    Channel *channel = new Channel(ep,serv_sock->getFd());
-    std::function<void()> c = std::bind(&Server::newConnection,this,serv_sock);
-    channel->setCallback(c);
-    channel->enableReading();
-    
+    acceptor = new Acceptor(ep);
+    std::function<void(Socket*)> cb = std::bind(&Server::newConnection, this, std::placeholders::_1);
+    acceptor->setNewConnectionCallback(cb);
 }
 
 Server::~Server(){
