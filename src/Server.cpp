@@ -26,5 +26,4 @@ void Server::deleteConnection(Socket *serv_sock) {
     it = connections.find(serv_sock->getFd());
     connections.erase(it);
     delete it->second;
-    
 }
