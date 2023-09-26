@@ -1,13 +1,16 @@
 #include "Epoll.h"
 #include "Eventloop.h"
 #include "Channel.h"
+#include "ThreadPool.h"
 #include <vector>
 Eventloop::Eventloop():ep_(nullptr), quit(false){
     ep_ = new Epoll();
+    pool = new ThreadPool(10);
 }
 
 Eventloop::~Eventloop(){
     delete ep_;
+    delete pool;
 }
 
 void Eventloop::loop() {
@@ -25,4 +28,7 @@ void Eventloop::loop() {
 
 void Eventloop::updateChannel(Channel * c) {
     ep_->updateChannel(c);
+}
+void Eventloop::addThread(std::function<void()> func){
+    pool->add(func);
 }

@@ -2,7 +2,8 @@
 #include "Eventloop.h"
 #include "Channel.h"
 void Channel::handleEvent() {
-    callback();
+    ep->addThread(callback);
+    // callback();
 }
 void Channel::setCallback(std::function<void()> cb) {
     callback = cb;
