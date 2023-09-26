@@ -124,3 +124,13 @@ Reactor把服务器处理模式分为了：1、Reactor 对象的作用是监听�
 ###### 1、string的知识（c_str, clear和erase的区别）：
 
 答：首先，string类的实现实际上封装着一个char*的指针，我们调用c_str实际上是返回一个const char *的指针，指的是指向字符常量的指针，即指针可以改变指向但其指向的内容不可以改变。但是如果讲c_str的返回值给一个const char * str，因为str的生命周期是由c_str的返回值是有string管理的，所以改变string的值或者直接改变str的值都是会实际改变的，请注意如果string销毁了，str也将销毁。clear是讲string的首地址指针的值改为'\0'而不是删除所有内容，erase是删除所有内容。
+
+------
+
+#### day9
+
+今天我们实现了线程池，为了实现多线程的并发，我们讲线程池建立在EventLoop里，每次Channel有事件需要处理时，不再调用callback而是将事件添加到线程池上来处理，每次的事件处理都有一个线程来处理，线程池中一共有10个线程，在创建线程池时将它阻塞然后等待有add事件时notify来唤醒。
+
+###### 1、condition_variable.wait()
+
+void wait( std::unique_lock< std::mutex >& lock, Predicate pred );其中第一个形参必须时unique_lock,因为wait()先unlock之前获得的mutex，然后阻塞当前的执行线程。其中第二个参数pred只有为false时才会阻塞线程。
