@@ -1,19 +1,17 @@
 #include "Acceptor.h"
 #include "Server.h"
 Acceptor::Acceptor(Eventloop *ep):loop(ep){
+
     sock = new Socket();
-    addr = new InetAddress("127.0.0.1", 8890);
-
-    //绑定sockfd文件描述符
+    InetAddress *addr = new InetAddress("127.0.0.1", 8890);
     sock->bind(addr);
-    sock->listen();  
-
-    //添加epoll
-    sock->setnonblocking();
-    acceptChannel = new Channel(loop,sock->getFd());
+    // sock->setnonblocking();
+    sock->listen(); 
+    acceptChannel = new Channel(loop, sock->getFd());
     std::function<void()> cb = std::bind(&Acceptor::acceptConnection, this);
-    acceptChannel->setCallback(cb);
+    acceptChannel->setReadCallback(cb);
     acceptChannel->enableReading();
+    acceptChannel->setUseThreadPool(false);
     delete addr;
 }
 
@@ -24,7 +22,14 @@ Acceptor::~Acceptor(){
 }
 
 void Acceptor::acceptConnection() {
-    newConnections(sock);
+    // newConnections(sock);
+
+    InetAddress *clnt_addr = new InetAddress();      
+    Socket *clnt_sock = new Socket(sock->accept(clnt_addr));      
+    printf("new client fd %d! IP: %s Port: %d\n", clnt_sock->getFd(), inet_ntoa(clnt_addr->getAddr().sin_addr), ntohs(clnt_addr->getAddr().sin_port));
+    clnt_sock->setnonblocking();
+    newConnections(clnt_sock);
+    delete clnt_addr;
 }
 
 void Acceptor::setNewConnectionCallback(std::function<void(Socket *)> cb){

@@ -7,6 +7,7 @@ class Buffer
         std::string s;
     public:
         void append(const char* _str, int _size);
+        void setBuf(const char *_buf);
         ssize_t size();
         const char* c_str();
         void clear();

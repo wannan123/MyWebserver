@@ -14,3 +14,11 @@ InetAddress::InetAddress(){
 InetAddress::~InetAddress()
 {
 }
+
+void InetAddress::setInetAddr(sockaddr_in _addr){
+    sock_add = _addr;
+}
+
+sockaddr_in InetAddress::getAddr(){
+    return sock_add;
+}

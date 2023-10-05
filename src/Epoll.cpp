@@ -2,14 +2,13 @@
 #include <unistd.h>
 #include <iostream>
 using namespace std;
-void Epoll::addFd(int fd, uint32_t op) {
-    struct epoll_event ev;
-    bzero(&ev, sizeof(ev));
-    ev.events = op;
-    ev.data.fd = fd;
-    error(epoll_ctl(epollfd, EPOLL_CTL_ADD, fd, &ev),"epoll_ctl: add fd error");//将服务器fd添加到epoll树上。
-    
-}
+// void Epoll::addFd(int fd, uint32_t op) {
+//     struct epoll_event ev;
+//     bzero(&ev, sizeof(ev));
+//     ev.events = op;
+//     ev.data.fd = fd;
+//     error(epoll_ctl(epollfd, EPOLL_CTL_ADD, fd, &ev),"epoll_ctl: add fd error");//将服务器fd添加到epoll树上。
+// }
 
 std::vector<Channel*> Epoll::poll() {
     std::vector<Channel*> activeEvents;

@@ -18,6 +18,7 @@ class Socket
         void listen();
         void setnonblocking();
         int accept(InetAddress *fd);
+        void connect(InetAddress*);
         int getFd();
         Socket();
         Socket(int fd);

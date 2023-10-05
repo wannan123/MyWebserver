@@ -4,6 +4,10 @@ void Buffer::append(const char *_str, int _size){
         s.append(_str);
     }
 }
+void Buffer::setBuf(const char* _buf){
+    s.clear();
+    s.append(_buf);
+}
 ssize_t Buffer::size(){
     return s.size();
 }

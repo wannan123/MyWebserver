@@ -1,19 +1,19 @@
 #include "ThreadPool.h"
 #include <iostream>
-void ThreadPool::add(function<void()> func){
-    { //在这个{}作用域内对std::mutex加锁，出了作用域会自动解锁，不需要调用unlock()
-        std::unique_lock<std::mutex> lock(task_mutex);
-        if(stop)
-            throw std::runtime_error("ThreadPool already stop, can't add task any more");
-        tasks.emplace(func);
-    }
-    cv.notify_one();    //通知一次条件变量
-}
+// void ThreadPool::add(function<void()> func){
+//     { //在这个{}作用域内对std::mutex加锁，出了作用域会自动解锁，不需要调用unlock()
+//         std::unique_lock<std::mutex> lock(task_mutex);
+//         if(stop)
+//             throw std::runtime_error("ThreadPool already stop, can't add task any more");
+//         tasks.emplace(func);
+//     }
+//     cv.notify_one();    //通知一次条件变量
+// }
 ThreadPool::ThreadPool(int _size) : size(_size){
     for (int i = 0; i < _size; i++)
     {
         threads.emplace_back(thread([this](){
-            cout<<"create thread and pid is :"<<std::this_thread::get_id()<<endl;
+            //cout<<"create thread and pid is :"<<std::this_thread::get_id()<<endl;
             while (true)
             {
                 function<void()> func;
@@ -26,7 +26,7 @@ ThreadPool::ThreadPool(int _size) : size(_size){
                     func = tasks.front();
                     tasks.pop();
                 }
-                cout<<std::this_thread::get_id()<<endl;
+                //cout<<std::this_thread::get_id()<<endl;
                 func();
             }
         }));
