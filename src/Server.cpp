@@ -36,10 +36,10 @@ void Server::deleteConnection(int sockfd) {
         auto it = connections.find(sockfd);
         if(it != connections.end()){
             Connection *conn = connections[sockfd];
-            //close(sockfd);       //正常
-            connections.erase(sockfd);
             
-            delete conn;         //会Segmant fault
+            connections.erase(sockfd);
+            close(sockfd);       //正常
+            //delete conn;         //会Segmant fault
         }
     }
 }

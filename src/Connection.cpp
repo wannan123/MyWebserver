@@ -43,7 +43,7 @@ void Connection::echo(int fd) {
             break;
         } else {
             printf("Connection reset by peer\n");
-            deleteConnectionCallback(fd);          //会有bug，注释后单线程无bug
+            //deleteConnectionCallback(fd);          //会有bug，注释后单线程无bug
             break;
         }
     }

@@ -59,8 +59,8 @@ void oneClient(int msgs, int wait){
 
 int main(int argc, char *argv[]) {
     int threads = 100;
-    int msgs = 100;
-    int wait = 0;
+    int msgs = 5;
+    int wait = 6;
     int o;
     const char *optstring = "t:m:w:";
     while ((o = getopt(argc, argv, optstring)) != -1) {
