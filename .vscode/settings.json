@@ -110,5 +110,6 @@
     "future": "cpp",
     "mutex": "cpp",
     "thread": "cpp"
-  }
+  },
+  "C_Cpp_Runner.msvcSecureNoWarnings": false
 }

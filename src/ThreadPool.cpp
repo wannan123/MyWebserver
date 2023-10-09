@@ -1,5 +1,6 @@
 #include "ThreadPool.h"
 #include <iostream>
+#include <algorithm>
 // void ThreadPool::add(function<void()> func){
 //     { //在这个{}作用域内对std::mutex加锁，出了作用域会自动解锁，不需要调用unlock()
 //         std::unique_lock<std::mutex> lock(task_mutex);
@@ -41,8 +42,10 @@ ThreadPool::~ThreadPool(){
         stop = true;
     }
     cv.notify_all();
-    for(std::thread &th : threads){
-        if(th.joinable())
-            th.join();
-    }
+    //std::cout<<"kakakaka"<<endl;
+    std::for_each(threads.begin(),threads.end(),[](std::thread& t){t.join();});
+    // for(std::thread &th : threads){
+    //     if(th.joinable())
+    //         th.join();
+    // }
 }

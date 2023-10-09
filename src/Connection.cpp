@@ -5,7 +5,6 @@ Connection::Connection(Eventloop *_loop, Socket *_sock) : loop(_loop), sock(_soc
     handleChannel = new Channel(loop, sock->getFd());
     std::function<void()> cb = std::bind(&Connection::echo, this, sock->getFd());
     handleChannel->setReadCallback(cb);
-    handleChannel->setUseThreadPool(true);
     handleChannel->enableReading();
     handleChannel->useET();
     readBuffer = new Buffer();
@@ -43,7 +42,7 @@ void Connection::echo(int fd) {
             break;
         } else {
             printf("Connection reset by peer\n");
-            //deleteConnectionCallback(fd);          //会有bug，注释后单线程无bug
+            deleteConnectionCallback(fd);          //会有bug，注释后单线程无bug
             break;
         }
     }

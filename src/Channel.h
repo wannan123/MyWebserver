@@ -13,8 +13,6 @@ class Channel
         uint32_t revents;//表示epoll返回该Channel时文件描述符正在发生的事件
         bool inEpoll;
         //std::function<void()> callback;
-
-        bool useThreadPool;
         std::function<void()> readCallback;
         std::function<void()> writeCallback;
     public:
@@ -29,7 +27,6 @@ class Channel
         void setEpoll();
         void setRevents(uint32_t revent);
         void setEvents(uint32_t event);
-        void setUseThreadPool(bool use = true);
         Channel(Eventloop *ep, int fd);
         ~Channel();
 };

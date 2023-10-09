@@ -3,16 +3,11 @@
 #include "Channel.h"
 void Channel::handleEvent() {
     if(revents & (EPOLLIN | EPOLLPRI)){
-        if(useThreadPool)       
-            ep->addThread(readCallback);
-        else
-            readCallback();
+        readCallback();
     }
     if(revents & (EPOLLOUT)){
-        if(useThreadPool)       
-            ep->addThread(writeCallback);
-        else
-            writeCallback();
+
+        writeCallback();
     }    // callback();
 }
 void Channel::setReadCallback(std::function<void()> cb) {
@@ -44,9 +39,6 @@ void Channel::setRevents(uint32_t revent) {
 }
 void Channel::setEvents(uint32_t event) {
     events = event;
-}
-void Channel::setUseThreadPool(bool use){
-    useThreadPool = use;
 }
 Channel::Channel(Eventloop *ep, int fd)
     : ep(ep), fd(fd), events(0), revents(0), inEpoll(false) {}
