@@ -168,4 +168,8 @@ void wait( std::unique_lock< std::mutex >& lock, Predicate pred );其中第一�
 
 答：就是可以将函数设置为不定参数，如果有一个函数调用为foo(11,"sash",dd)你不知道参数到底是什么类型，这个时候就可以用到template< class F, class... Args>，F为函数，Args为参数。
 
+------
 
+#### day10
+
+今天的学习中，我们采取了主Reactor和子Reactor分离的设计模式，将线程池从Eventloop中脱离出来，它的生命周期应该由Server来管理，我们设计了一个Vector来存放subReactor---Eventloop,每个线程的任务将会是Eventloop的Pool.
