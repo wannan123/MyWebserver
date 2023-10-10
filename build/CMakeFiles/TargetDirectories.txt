@@ -1,0 +1,16 @@
+/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles/rebuild_cache.dir
+/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles/edit_cache.dir
+/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles/clang-tidy.dir
+/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles/cpplint.dir
+/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles/check-format.dir
+/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles/format.dir
+/home/wuchengen/Desktop/MyWebserver/build/src/CMakeFiles/rebuild_cache.dir
+/home/wuchengen/Desktop/MyWebserver/build/src/CMakeFiles/edit_cache.dir
+/home/wuchengen/Desktop/MyWebserver/build/src/CMakeFiles/pine_shared.dir
+/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/rebuild_cache.dir
+/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/edit_cache.dir
+/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/client.dir
+/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/ThreadPoolTest.dir
+/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/check-tests.dir
+/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/server.dir
+/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/build-tests.dir

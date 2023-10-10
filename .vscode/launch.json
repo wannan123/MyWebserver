@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": false,
       "cwd": "/home/wuchengen/Desktop/MyWebserver",
-      "program": "/home/wuchengen/Desktop/MyWebserver/build/Debug/outDebug",
+      "program": "/home/wuchengen/Desktop/MyWebserver/test/server",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
