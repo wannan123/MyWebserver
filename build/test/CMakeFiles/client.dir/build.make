@@ -60,15 +60,15 @@ include test/CMakeFiles/client.dir/flags.make
 test/CMakeFiles/client.dir/client.cpp.o: test/CMakeFiles/client.dir/flags.make
 test/CMakeFiles/client.dir/client.cpp.o: ../test/client.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/client.dir/client.cpp.o"
-	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/client.cpp.o -c /home/wuchengen/Desktop/MyWebserver/test/client.cpp
+	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/client.cpp.o -c /home/wuchengen/Desktop/MyWebserver/test/client.cpp
 
 test/CMakeFiles/client.dir/client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/client.cpp.i"
-	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wuchengen/Desktop/MyWebserver/test/client.cpp > CMakeFiles/client.dir/client.cpp.i
+	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wuchengen/Desktop/MyWebserver/test/client.cpp > CMakeFiles/client.dir/client.cpp.i
 
 test/CMakeFiles/client.dir/client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/client.cpp.s"
-	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wuchengen/Desktop/MyWebserver/test/client.cpp -o CMakeFiles/client.dir/client.cpp.s
+	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wuchengen/Desktop/MyWebserver/test/client.cpp -o CMakeFiles/client.dir/client.cpp.s
 
 # Object files for target client
 client_OBJECTS = \

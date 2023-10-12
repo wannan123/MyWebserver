@@ -1,7 +1,6 @@
 #include "include/Acceptor.h"
 #include "include/Server.h"
 Acceptor::Acceptor(Eventloop *ep) : loop(ep) {
-
   sock = new Socket();
   InetAddress *addr = new InetAddress("127.0.0.1", 8890);
   sock->bind(addr);
@@ -22,7 +21,6 @@ Acceptor::~Acceptor() {
 
 void Acceptor::acceptConnection() {
   // newConnections(sock);
-
   InetAddress *clnt_addr = new InetAddress();
   Socket *clnt_sock = new Socket(sock->accept(clnt_addr));
   printf("new client fd %d! IP: %s Port: %d\n", clnt_sock->getFd(),

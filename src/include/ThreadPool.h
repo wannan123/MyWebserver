@@ -9,21 +9,21 @@
 using namespace std;
 class ThreadPool {
 private:
-  vector<thread> threads;
-  mutex task_mutex;
-  condition_variable cv;
-  std::queue<std::function<void()>> tasks;
+    vector<thread> threads;
+    mutex task_mutex;
+    condition_variable cv;
+    std::queue<std::function<void()>> tasks;
 
-  bool stop;
-  int size;
+    bool stop;
+    int size;
 
 public:
-  // void add(function<void()> func);
-  template <class F, class... Args>
-  auto add(F &&f, Args &&... args)
-      -> std::future<typename std::result_of<F(Args...)>::type>;
-  ThreadPool(int size);
-  ~ThreadPool();
+    // void add(function<void()> func);
+    template <class F, class... Args>
+    auto add(F &&f, Args &&... args)
+        -> std::future<typename std::result_of<F(Args...)>::type>;
+    ThreadPool(int size);
+    ~ThreadPool();
 };
 template <class F, class... Args>
 auto ThreadPool::add(F &&f, Args &&... args)

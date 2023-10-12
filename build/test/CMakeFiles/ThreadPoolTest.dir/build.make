@@ -60,15 +60,15 @@ include test/CMakeFiles/ThreadPoolTest.dir/flags.make
 test/CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.o: test/CMakeFiles/ThreadPoolTest.dir/flags.make
 test/CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.o: ../test/ThreadPoolTest.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.o"
-	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.o -c /home/wuchengen/Desktop/MyWebserver/test/ThreadPoolTest.cpp
+	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.o -c /home/wuchengen/Desktop/MyWebserver/test/ThreadPoolTest.cpp
 
 test/CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.i"
-	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wuchengen/Desktop/MyWebserver/test/ThreadPoolTest.cpp > CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.i
+	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wuchengen/Desktop/MyWebserver/test/ThreadPoolTest.cpp > CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.i
 
 test/CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.s"
-	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wuchengen/Desktop/MyWebserver/test/ThreadPoolTest.cpp -o CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.s
+	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wuchengen/Desktop/MyWebserver/test/ThreadPoolTest.cpp -o CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.s
 
 # Object files for target ThreadPoolTest
 ThreadPoolTest_OBJECTS = \

@@ -1,7 +1,7 @@
 #include "include/Epoll.h"
 #include <iostream>
 #include <unistd.h>
-using namespace std;
+// using namespace std;
 // void Epoll::addFd(int fd, uint32_t op) {
 //     struct epoll_event ev;
 //     bzero(&ev, sizeof(ev));
@@ -55,7 +55,7 @@ Epoll::Epoll() : epollfd(-1), events(nullptr) {
   bzero(
       events,
       sizeof(*events) *
-          MAX_NUM); //这里第一个参数events是个指针，如果用&event的话就是个二级指针了。
+          MAX_NUM);  //这里第一个参数events是个指针，如果用&event的话就是个二级指针了。
 }
 
 Epoll::~Epoll() {
