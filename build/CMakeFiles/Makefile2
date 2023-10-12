@@ -106,8 +106,9 @@ test/preinstall:
 .PHONY : test/preinstall
 
 # Recursive "clean" directory target.
-test/clean: test/CMakeFiles/client.dir/clean
-test/clean: test/CMakeFiles/ThreadPoolTest.dir/clean
+test/clean: test/CMakeFiles/thread_test.dir/clean
+test/clean: test/CMakeFiles/single_client.dir/clean
+test/clean: test/CMakeFiles/multiple_client.dir/clean
 test/clean: test/CMakeFiles/check-tests.dir/clean
 test/clean: test/CMakeFiles/server.dir/clean
 test/clean: test/CMakeFiles/build-tests.dir/clean
@@ -229,7 +230,7 @@ CMakeFiles/format.dir/clean:
 src/CMakeFiles/pine_shared.dir/all:
 	$(MAKE) -f src/CMakeFiles/pine_shared.dir/build.make src/CMakeFiles/pine_shared.dir/depend
 	$(MAKE) -f src/CMakeFiles/pine_shared.dir/build.make src/CMakeFiles/pine_shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13,14,15,16 "Built target pine_shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14 "Built target pine_shared"
 .PHONY : src/CMakeFiles/pine_shared.dir/all
 
 # Build rule for subdir invocation for target.
@@ -250,65 +251,93 @@ src/CMakeFiles/pine_shared.dir/clean:
 .PHONY : src/CMakeFiles/pine_shared.dir/clean
 
 #=============================================================================
-# Target rules for target test/CMakeFiles/client.dir
+# Target rules for target test/CMakeFiles/thread_test.dir
 
 # All Build rule for target.
-test/CMakeFiles/client.dir/all: src/CMakeFiles/pine_shared.dir/all
-	$(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/depend
-	$(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=3,4 "Built target client"
-.PHONY : test/CMakeFiles/client.dir/all
+test/CMakeFiles/thread_test.dir/all: src/CMakeFiles/pine_shared.dir/all
+	$(MAKE) -f test/CMakeFiles/thread_test.dir/build.make test/CMakeFiles/thread_test.dir/depend
+	$(MAKE) -f test/CMakeFiles/thread_test.dir/build.make test/CMakeFiles/thread_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=19,20 "Built target thread_test"
+.PHONY : test/CMakeFiles/thread_test.dir/all
 
 # Build rule for subdir invocation for target.
-test/CMakeFiles/client.dir/rule: cmake_check_build_system
+test/CMakeFiles/thread_test.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuchengen/Desktop/MyWebserver/build/CMakeFiles 14
-	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/client.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/thread_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuchengen/Desktop/MyWebserver/build/CMakeFiles 0
-.PHONY : test/CMakeFiles/client.dir/rule
+.PHONY : test/CMakeFiles/thread_test.dir/rule
 
 # Convenience name for target.
-client: test/CMakeFiles/client.dir/rule
+thread_test: test/CMakeFiles/thread_test.dir/rule
 
-.PHONY : client
+.PHONY : thread_test
 
 # clean rule for target.
-test/CMakeFiles/client.dir/clean:
-	$(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/clean
-.PHONY : test/CMakeFiles/client.dir/clean
+test/CMakeFiles/thread_test.dir/clean:
+	$(MAKE) -f test/CMakeFiles/thread_test.dir/build.make test/CMakeFiles/thread_test.dir/clean
+.PHONY : test/CMakeFiles/thread_test.dir/clean
 
 #=============================================================================
-# Target rules for target test/CMakeFiles/ThreadPoolTest.dir
+# Target rules for target test/CMakeFiles/single_client.dir
 
 # All Build rule for target.
-test/CMakeFiles/ThreadPoolTest.dir/all: src/CMakeFiles/pine_shared.dir/all
-	$(MAKE) -f test/CMakeFiles/ThreadPoolTest.dir/build.make test/CMakeFiles/ThreadPoolTest.dir/depend
-	$(MAKE) -f test/CMakeFiles/ThreadPoolTest.dir/build.make test/CMakeFiles/ThreadPoolTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=1,2 "Built target ThreadPoolTest"
-.PHONY : test/CMakeFiles/ThreadPoolTest.dir/all
+test/CMakeFiles/single_client.dir/all: src/CMakeFiles/pine_shared.dir/all
+	$(MAKE) -f test/CMakeFiles/single_client.dir/build.make test/CMakeFiles/single_client.dir/depend
+	$(MAKE) -f test/CMakeFiles/single_client.dir/build.make test/CMakeFiles/single_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=17,18 "Built target single_client"
+.PHONY : test/CMakeFiles/single_client.dir/all
 
 # Build rule for subdir invocation for target.
-test/CMakeFiles/ThreadPoolTest.dir/rule: cmake_check_build_system
+test/CMakeFiles/single_client.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuchengen/Desktop/MyWebserver/build/CMakeFiles 14
-	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ThreadPoolTest.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/single_client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuchengen/Desktop/MyWebserver/build/CMakeFiles 0
-.PHONY : test/CMakeFiles/ThreadPoolTest.dir/rule
+.PHONY : test/CMakeFiles/single_client.dir/rule
 
 # Convenience name for target.
-ThreadPoolTest: test/CMakeFiles/ThreadPoolTest.dir/rule
+single_client: test/CMakeFiles/single_client.dir/rule
 
-.PHONY : ThreadPoolTest
+.PHONY : single_client
 
 # clean rule for target.
-test/CMakeFiles/ThreadPoolTest.dir/clean:
-	$(MAKE) -f test/CMakeFiles/ThreadPoolTest.dir/build.make test/CMakeFiles/ThreadPoolTest.dir/clean
-.PHONY : test/CMakeFiles/ThreadPoolTest.dir/clean
+test/CMakeFiles/single_client.dir/clean:
+	$(MAKE) -f test/CMakeFiles/single_client.dir/build.make test/CMakeFiles/single_client.dir/clean
+.PHONY : test/CMakeFiles/single_client.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/multiple_client.dir
+
+# All Build rule for target.
+test/CMakeFiles/multiple_client.dir/all: src/CMakeFiles/pine_shared.dir/all
+	$(MAKE) -f test/CMakeFiles/multiple_client.dir/build.make test/CMakeFiles/multiple_client.dir/depend
+	$(MAKE) -f test/CMakeFiles/multiple_client.dir/build.make test/CMakeFiles/multiple_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=1,2 "Built target multiple_client"
+.PHONY : test/CMakeFiles/multiple_client.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/multiple_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuchengen/Desktop/MyWebserver/build/CMakeFiles 14
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/multiple_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuchengen/Desktop/MyWebserver/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/multiple_client.dir/rule
+
+# Convenience name for target.
+multiple_client: test/CMakeFiles/multiple_client.dir/rule
+
+.PHONY : multiple_client
+
+# clean rule for target.
+test/CMakeFiles/multiple_client.dir/clean:
+	$(MAKE) -f test/CMakeFiles/multiple_client.dir/build.make test/CMakeFiles/multiple_client.dir/clean
+.PHONY : test/CMakeFiles/multiple_client.dir/clean
 
 #=============================================================================
 # Target rules for target test/CMakeFiles/check-tests.dir
 
 # All Build rule for target.
-test/CMakeFiles/check-tests.dir/all: test/CMakeFiles/client.dir/all
-test/CMakeFiles/check-tests.dir/all: test/CMakeFiles/ThreadPoolTest.dir/all
+test/CMakeFiles/check-tests.dir/all: test/CMakeFiles/thread_test.dir/all
+test/CMakeFiles/check-tests.dir/all: test/CMakeFiles/single_client.dir/all
+test/CMakeFiles/check-tests.dir/all: test/CMakeFiles/multiple_client.dir/all
 test/CMakeFiles/check-tests.dir/all: test/CMakeFiles/server.dir/all
 	$(MAKE) -f test/CMakeFiles/check-tests.dir/build.make test/CMakeFiles/check-tests.dir/depend
 	$(MAKE) -f test/CMakeFiles/check-tests.dir/build.make test/CMakeFiles/check-tests.dir/build
@@ -317,7 +346,7 @@ test/CMakeFiles/check-tests.dir/all: test/CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/check-tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuchengen/Desktop/MyWebserver/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuchengen/Desktop/MyWebserver/build/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/check-tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuchengen/Desktop/MyWebserver/build/CMakeFiles 0
 .PHONY : test/CMakeFiles/check-tests.dir/rule
@@ -339,7 +368,7 @@ test/CMakeFiles/check-tests.dir/clean:
 test/CMakeFiles/server.dir/all: src/CMakeFiles/pine_shared.dir/all
 	$(MAKE) -f test/CMakeFiles/server.dir/build.make test/CMakeFiles/server.dir/depend
 	$(MAKE) -f test/CMakeFiles/server.dir/build.make test/CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=17,18 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=15,16 "Built target server"
 .PHONY : test/CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
@@ -363,8 +392,9 @@ test/CMakeFiles/server.dir/clean:
 # Target rules for target test/CMakeFiles/build-tests.dir
 
 # All Build rule for target.
-test/CMakeFiles/build-tests.dir/all: test/CMakeFiles/client.dir/all
-test/CMakeFiles/build-tests.dir/all: test/CMakeFiles/ThreadPoolTest.dir/all
+test/CMakeFiles/build-tests.dir/all: test/CMakeFiles/thread_test.dir/all
+test/CMakeFiles/build-tests.dir/all: test/CMakeFiles/single_client.dir/all
+test/CMakeFiles/build-tests.dir/all: test/CMakeFiles/multiple_client.dir/all
 test/CMakeFiles/build-tests.dir/all: test/CMakeFiles/server.dir/all
 	$(MAKE) -f test/CMakeFiles/build-tests.dir/build.make test/CMakeFiles/build-tests.dir/depend
 	$(MAKE) -f test/CMakeFiles/build-tests.dir/build.make test/CMakeFiles/build-tests.dir/build
@@ -373,7 +403,7 @@ test/CMakeFiles/build-tests.dir/all: test/CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/build-tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuchengen/Desktop/MyWebserver/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuchengen/Desktop/MyWebserver/build/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/build-tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuchengen/Desktop/MyWebserver/build/CMakeFiles 0
 .PHONY : test/CMakeFiles/build-tests.dir/rule

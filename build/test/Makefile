@@ -111,34 +111,49 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/CMakeFiles/client.dir/rule:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/client.dir/rule
-.PHONY : test/CMakeFiles/client.dir/rule
+test/CMakeFiles/thread_test.dir/rule:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/thread_test.dir/rule
+.PHONY : test/CMakeFiles/thread_test.dir/rule
 
 # Convenience name for target.
-client: test/CMakeFiles/client.dir/rule
+thread_test: test/CMakeFiles/thread_test.dir/rule
 
-.PHONY : client
+.PHONY : thread_test
 
 # fast build rule for target.
-client/fast:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/build
-.PHONY : client/fast
+thread_test/fast:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/thread_test.dir/build.make test/CMakeFiles/thread_test.dir/build
+.PHONY : thread_test/fast
 
 # Convenience name for target.
-test/CMakeFiles/ThreadPoolTest.dir/rule:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ThreadPoolTest.dir/rule
-.PHONY : test/CMakeFiles/ThreadPoolTest.dir/rule
+test/CMakeFiles/single_client.dir/rule:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/single_client.dir/rule
+.PHONY : test/CMakeFiles/single_client.dir/rule
 
 # Convenience name for target.
-ThreadPoolTest: test/CMakeFiles/ThreadPoolTest.dir/rule
+single_client: test/CMakeFiles/single_client.dir/rule
 
-.PHONY : ThreadPoolTest
+.PHONY : single_client
 
 # fast build rule for target.
-ThreadPoolTest/fast:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/ThreadPoolTest.dir/build.make test/CMakeFiles/ThreadPoolTest.dir/build
-.PHONY : ThreadPoolTest/fast
+single_client/fast:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/single_client.dir/build.make test/CMakeFiles/single_client.dir/build
+.PHONY : single_client/fast
+
+# Convenience name for target.
+test/CMakeFiles/multiple_client.dir/rule:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/multiple_client.dir/rule
+.PHONY : test/CMakeFiles/multiple_client.dir/rule
+
+# Convenience name for target.
+multiple_client: test/CMakeFiles/multiple_client.dir/rule
+
+.PHONY : multiple_client
+
+# fast build rule for target.
+multiple_client/fast:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/multiple_client.dir/build.make test/CMakeFiles/multiple_client.dir/build
+.PHONY : multiple_client/fast
 
 # Convenience name for target.
 test/CMakeFiles/check-tests.dir/rule:
@@ -185,59 +200,32 @@ build-tests/fast:
 	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/build-tests.dir/build.make test/CMakeFiles/build-tests.dir/build
 .PHONY : build-tests/fast
 
-ThreadPoolTest.o: ThreadPoolTest.cpp.o
+multiple_client.o: multiple_client.cpp.o
 
-.PHONY : ThreadPoolTest.o
-
-# target to build an object file
-ThreadPoolTest.cpp.o:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/ThreadPoolTest.dir/build.make test/CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.o
-.PHONY : ThreadPoolTest.cpp.o
-
-ThreadPoolTest.i: ThreadPoolTest.cpp.i
-
-.PHONY : ThreadPoolTest.i
-
-# target to preprocess a source file
-ThreadPoolTest.cpp.i:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/ThreadPoolTest.dir/build.make test/CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.i
-.PHONY : ThreadPoolTest.cpp.i
-
-ThreadPoolTest.s: ThreadPoolTest.cpp.s
-
-.PHONY : ThreadPoolTest.s
-
-# target to generate assembly for a file
-ThreadPoolTest.cpp.s:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/ThreadPoolTest.dir/build.make test/CMakeFiles/ThreadPoolTest.dir/ThreadPoolTest.cpp.s
-.PHONY : ThreadPoolTest.cpp.s
-
-client.o: client.cpp.o
-
-.PHONY : client.o
+.PHONY : multiple_client.o
 
 # target to build an object file
-client.cpp.o:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/client.cpp.o
-.PHONY : client.cpp.o
+multiple_client.cpp.o:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/multiple_client.dir/build.make test/CMakeFiles/multiple_client.dir/multiple_client.cpp.o
+.PHONY : multiple_client.cpp.o
 
-client.i: client.cpp.i
+multiple_client.i: multiple_client.cpp.i
 
-.PHONY : client.i
+.PHONY : multiple_client.i
 
 # target to preprocess a source file
-client.cpp.i:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/client.cpp.i
-.PHONY : client.cpp.i
+multiple_client.cpp.i:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/multiple_client.dir/build.make test/CMakeFiles/multiple_client.dir/multiple_client.cpp.i
+.PHONY : multiple_client.cpp.i
 
-client.s: client.cpp.s
+multiple_client.s: multiple_client.cpp.s
 
-.PHONY : client.s
+.PHONY : multiple_client.s
 
 # target to generate assembly for a file
-client.cpp.s:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/client.cpp.s
-.PHONY : client.cpp.s
+multiple_client.cpp.s:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/multiple_client.dir/build.make test/CMakeFiles/multiple_client.dir/multiple_client.cpp.s
+.PHONY : multiple_client.cpp.s
 
 server.o: server.cpp.o
 
@@ -266,6 +254,60 @@ server.cpp.s:
 	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/server.dir/build.make test/CMakeFiles/server.dir/server.cpp.s
 .PHONY : server.cpp.s
 
+single_client.o: single_client.cpp.o
+
+.PHONY : single_client.o
+
+# target to build an object file
+single_client.cpp.o:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/single_client.dir/build.make test/CMakeFiles/single_client.dir/single_client.cpp.o
+.PHONY : single_client.cpp.o
+
+single_client.i: single_client.cpp.i
+
+.PHONY : single_client.i
+
+# target to preprocess a source file
+single_client.cpp.i:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/single_client.dir/build.make test/CMakeFiles/single_client.dir/single_client.cpp.i
+.PHONY : single_client.cpp.i
+
+single_client.s: single_client.cpp.s
+
+.PHONY : single_client.s
+
+# target to generate assembly for a file
+single_client.cpp.s:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/single_client.dir/build.make test/CMakeFiles/single_client.dir/single_client.cpp.s
+.PHONY : single_client.cpp.s
+
+thread_test.o: thread_test.cpp.o
+
+.PHONY : thread_test.o
+
+# target to build an object file
+thread_test.cpp.o:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/thread_test.dir/build.make test/CMakeFiles/thread_test.dir/thread_test.cpp.o
+.PHONY : thread_test.cpp.o
+
+thread_test.i: thread_test.cpp.i
+
+.PHONY : thread_test.i
+
+# target to preprocess a source file
+thread_test.cpp.i:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/thread_test.dir/build.make test/CMakeFiles/thread_test.dir/thread_test.cpp.i
+.PHONY : thread_test.cpp.i
+
+thread_test.s: thread_test.cpp.s
+
+.PHONY : thread_test.s
+
+# target to generate assembly for a file
+thread_test.cpp.s:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/thread_test.dir/build.make test/CMakeFiles/thread_test.dir/thread_test.cpp.s
+.PHONY : thread_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -274,20 +316,24 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... client"
-	@echo "... ThreadPoolTest"
+	@echo "... thread_test"
+	@echo "... single_client"
+	@echo "... multiple_client"
 	@echo "... check-tests"
 	@echo "... server"
 	@echo "... build-tests"
-	@echo "... ThreadPoolTest.o"
-	@echo "... ThreadPoolTest.i"
-	@echo "... ThreadPoolTest.s"
-	@echo "... client.o"
-	@echo "... client.i"
-	@echo "... client.s"
+	@echo "... multiple_client.o"
+	@echo "... multiple_client.i"
+	@echo "... multiple_client.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"
+	@echo "... single_client.o"
+	@echo "... single_client.i"
+	@echo "... single_client.s"
+	@echo "... thread_test.o"
+	@echo "... thread_test.i"
+	@echo "... thread_test.s"
 .PHONY : help
 
 

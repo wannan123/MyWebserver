@@ -11,7 +11,7 @@ void Buffer::setBuf(const char *_buf) {
 ssize_t Buffer::size() { return s.size(); }
 const char *Buffer::c_str() { return s.c_str(); }
 void Buffer::clear() {
-  s.erase();   //不能是clear哦~
+  s.erase(); // 不能是clear哦~
 }
 void Buffer::getline() {
   s.erase();

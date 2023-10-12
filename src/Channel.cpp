@@ -7,7 +7,7 @@ void Channel::handleEvent() {
   }
   if (revents & (EPOLLOUT)) {
     writeCallback();
-  }  // callback();
+  } // callback();
 }
 void Channel::setReadCallback(std::function<void()> cb) { readCallback = cb; }
 void Channel::enableReading() {

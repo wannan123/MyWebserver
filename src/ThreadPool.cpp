@@ -12,14 +12,14 @@
 //     }
 //     cv.notify_one();    //通知一次条件变量
 // }
-ThreadPool::ThreadPool(int _size) : size(_size) {
+ThreadPool::ThreadPool(int _size){
   for (int i = 0; i < _size; i++) {
-    threads.emplace_back(thread([this]() {
+    threads.emplace_back(std::thread([this]() {
       // cout<<"create thread and pid is :"<<std::this_thread::get_id()<<endl;
       while (true) {
-        function<void()> func;
+        std::function<void()> func;
         {
-          unique_lock<mutex> lock(task_mutex);
+          std::unique_lock<std::mutex> lock(task_mutex);
           cv.wait(lock, [this]() { return stop || !tasks.empty(); });
           if (stop && tasks.empty())
             return;

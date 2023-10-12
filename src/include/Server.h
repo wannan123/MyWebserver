@@ -9,16 +9,16 @@
 #include <vector>
 class Server {
 private:
-    Eventloop *acceptReactor;
-    Acceptor *acceptor;
-    std::vector<Eventloop *> subReactors;
-    std::map<int, Connection *> connections;
-    ThreadPool *threads;
+  Eventloop *acceptReactor;
+  Acceptor *acceptor;
+  std::vector<Eventloop *> subReactors;
+  std::map<int, Connection *> connections;
+  ThreadPool *threads;
 
 public:
-    Server(Eventloop *);
-    ~Server();
-    // void handleReadEvent(int);
-    void newConnection(Socket *serv_sock);
-    void deleteConnection(int sockfd);
+  Server(Eventloop *);
+  ~Server();
+  // void handleReadEvent(int);
+  void newConnection(Socket *serv_sock);
+  void deleteConnection(int sockfd);
 };

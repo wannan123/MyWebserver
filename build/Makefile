@@ -176,30 +176,43 @@ pine_shared/fast:
 .PHONY : pine_shared/fast
 
 #=============================================================================
-# Target rules for targets named client
+# Target rules for targets named thread_test
 
 # Build rule for target.
-client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 client
-.PHONY : client
+thread_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 thread_test
+.PHONY : thread_test
 
 # fast build rule for target.
-client/fast:
-	$(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/build
-.PHONY : client/fast
+thread_test/fast:
+	$(MAKE) -f test/CMakeFiles/thread_test.dir/build.make test/CMakeFiles/thread_test.dir/build
+.PHONY : thread_test/fast
 
 #=============================================================================
-# Target rules for targets named ThreadPoolTest
+# Target rules for targets named single_client
 
 # Build rule for target.
-ThreadPoolTest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ThreadPoolTest
-.PHONY : ThreadPoolTest
+single_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 single_client
+.PHONY : single_client
 
 # fast build rule for target.
-ThreadPoolTest/fast:
-	$(MAKE) -f test/CMakeFiles/ThreadPoolTest.dir/build.make test/CMakeFiles/ThreadPoolTest.dir/build
-.PHONY : ThreadPoolTest/fast
+single_client/fast:
+	$(MAKE) -f test/CMakeFiles/single_client.dir/build.make test/CMakeFiles/single_client.dir/build
+.PHONY : single_client/fast
+
+#=============================================================================
+# Target rules for targets named multiple_client
+
+# Build rule for target.
+multiple_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 multiple_client
+.PHONY : multiple_client
+
+# fast build rule for target.
+multiple_client/fast:
+	$(MAKE) -f test/CMakeFiles/multiple_client.dir/build.make test/CMakeFiles/multiple_client.dir/build
+.PHONY : multiple_client/fast
 
 #=============================================================================
 # Target rules for targets named check-tests
@@ -253,8 +266,9 @@ help:
 	@echo "... check-format"
 	@echo "... format"
 	@echo "... pine_shared"
-	@echo "... client"
-	@echo "... ThreadPoolTest"
+	@echo "... thread_test"
+	@echo "... single_client"
+	@echo "... multiple_client"
 	@echo "... check-tests"
 	@echo "... server"
 	@echo "... build-tests"

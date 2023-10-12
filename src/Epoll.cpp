@@ -47,7 +47,6 @@ void Epoll::updateChannel(Channel *Channel) {
 // }
 
 Epoll::Epoll() : epollfd(-1), events(nullptr) {
-
   epollfd = epoll_create1(0);
   error(epollfd, "epoll_create1");
   events = new epoll_event[MAX_NUM];
@@ -55,7 +54,7 @@ Epoll::Epoll() : epollfd(-1), events(nullptr) {
   bzero(
       events,
       sizeof(*events) *
-          MAX_NUM);  //这里第一个参数events是个指针，如果用&event的话就是个二级指针了。
+          MAX_NUM); // 这里第一个参数events是个指针，如果用&event的话就是个二级指针了。
 }
 
 Epoll::~Epoll() {

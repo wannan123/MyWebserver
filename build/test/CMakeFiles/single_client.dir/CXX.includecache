@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/include/util.h
+cstdio
+-
+cstdlib
+-
+
+/home/wuchengen/Desktop/MyWebserver/test/single_client.cpp
+util.h
+/home/wuchengen/Desktop/MyWebserver/test/util.h
+arpa/inet.h
+-
+stdio.h
+-
+stdlib.h
+-
+sys/socket.h
+-
+unistd.h
+-
+cstring
+-
+iostream
+-
+

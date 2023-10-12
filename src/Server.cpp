@@ -49,8 +49,8 @@ void Server::deleteConnection(int sockfd) {
       Connection *conn = connections[sockfd];
 
       connections.erase(sockfd);
-      close(sockfd);  //正常
-      delete conn;               // delete conn;         //会Segmant fault
+      close(sockfd); //正常
+      delete conn;   // delete conn;         //会Segmant fault
     }
   }
 }
