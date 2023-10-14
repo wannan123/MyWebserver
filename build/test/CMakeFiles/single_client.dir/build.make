@@ -60,15 +60,15 @@ include test/CMakeFiles/single_client.dir/flags.make
 test/CMakeFiles/single_client.dir/single_client.cpp.o: test/CMakeFiles/single_client.dir/flags.make
 test/CMakeFiles/single_client.dir/single_client.cpp.o: ../test/single_client.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/single_client.dir/single_client.cpp.o"
-	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/single_client.dir/single_client.cpp.o -c /home/wuchengen/Desktop/MyWebserver/test/single_client.cpp
+	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/single_client.dir/single_client.cpp.o -c /home/wuchengen/Desktop/MyWebserver/test/single_client.cpp
 
 test/CMakeFiles/single_client.dir/single_client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/single_client.dir/single_client.cpp.i"
-	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wuchengen/Desktop/MyWebserver/test/single_client.cpp > CMakeFiles/single_client.dir/single_client.cpp.i
+	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wuchengen/Desktop/MyWebserver/test/single_client.cpp > CMakeFiles/single_client.dir/single_client.cpp.i
 
 test/CMakeFiles/single_client.dir/single_client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/single_client.dir/single_client.cpp.s"
-	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wuchengen/Desktop/MyWebserver/test/single_client.cpp -o CMakeFiles/single_client.dir/single_client.cpp.s
+	cd /home/wuchengen/Desktop/MyWebserver/build/test && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wuchengen/Desktop/MyWebserver/test/single_client.cpp -o CMakeFiles/single_client.dir/single_client.cpp.s
 
 # Object files for target single_client
 single_client_OBJECTS = \

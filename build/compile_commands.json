@@ -1,77 +1,77 @@
 [
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Acceptor.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Acceptor.cpp",
+  "command": "/usr/bin/clang++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Acceptor.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Acceptor.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/src/Acceptor.cpp"
 },
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Buffer.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Buffer.cpp",
+  "command": "/usr/bin/clang++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Buffer.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Buffer.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/src/Buffer.cpp"
 },
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Channel.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Channel.cpp",
+  "command": "/usr/bin/clang++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Channel.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Channel.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/src/Channel.cpp"
 },
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Connection.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Connection.cpp",
+  "command": "/usr/bin/clang++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Connection.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Connection.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/src/Connection.cpp"
 },
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Epoll.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Epoll.cpp",
+  "command": "/usr/bin/clang++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Epoll.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Epoll.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/src/Epoll.cpp"
 },
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Eventloop.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Eventloop.cpp",
+  "command": "/usr/bin/clang++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Eventloop.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Eventloop.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/src/Eventloop.cpp"
 },
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/InetAddress.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/InetAddress.cpp",
+  "command": "/usr/bin/clang++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/InetAddress.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/InetAddress.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/src/InetAddress.cpp"
 },
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Server.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Server.cpp",
+  "command": "/usr/bin/clang++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Server.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Server.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/src/Server.cpp"
 },
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Socket.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Socket.cpp",
+  "command": "/usr/bin/clang++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/Socket.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Socket.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/src/Socket.cpp"
 },
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/ThreadPool.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/ThreadPool.cpp",
+  "command": "/usr/bin/clang++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/ThreadPool.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/ThreadPool.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/src/ThreadPool.cpp"
 },
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/src",
-  "command": "/usr/bin/c++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/util.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/util.cpp",
+  "command": "/usr/bin/clang++  -Dpine_shared_EXPORTS -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls -fPIC   -std=gnu++17 -o CMakeFiles/pine_shared.dir/util.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/util.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/src/util.cpp"
 },
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/test",
-  "command": "/usr/bin/c++   -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes   -std=gnu++17 -o CMakeFiles/thread_test.dir/thread_test.cpp.o -c /home/wuchengen/Desktop/MyWebserver/test/thread_test.cpp",
+  "command": "/usr/bin/clang++   -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls   -std=gnu++17 -o CMakeFiles/thread_test.dir/thread_test.cpp.o -c /home/wuchengen/Desktop/MyWebserver/test/thread_test.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/test/thread_test.cpp"
 },
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/test",
-  "command": "/usr/bin/c++   -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes   -std=gnu++17 -o CMakeFiles/single_client.dir/single_client.cpp.o -c /home/wuchengen/Desktop/MyWebserver/test/single_client.cpp",
+  "command": "/usr/bin/clang++   -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls   -std=gnu++17 -o CMakeFiles/single_client.dir/single_client.cpp.o -c /home/wuchengen/Desktop/MyWebserver/test/single_client.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/test/single_client.cpp"
 },
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/test",
-  "command": "/usr/bin/c++   -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes   -std=gnu++17 -o CMakeFiles/multiple_client.dir/multiple_client.cpp.o -c /home/wuchengen/Desktop/MyWebserver/test/multiple_client.cpp",
+  "command": "/usr/bin/clang++   -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls   -std=gnu++17 -o CMakeFiles/multiple_client.dir/multiple_client.cpp.o -c /home/wuchengen/Desktop/MyWebserver/test/multiple_client.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/test/multiple_client.cpp"
 },
 {
   "directory": "/home/wuchengen/Desktop/MyWebserver/build/test",
-  "command": "/usr/bin/c++   -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes   -std=gnu++17 -o CMakeFiles/server.dir/server.cpp.o -c /home/wuchengen/Desktop/MyWebserver/test/server.cpp",
+  "command": "/usr/bin/clang++   -I/home/wuchengen/Desktop/MyWebserver/src/include -I/home/wuchengen/Desktop/MyWebserver/test/include   -fPIC -Wall -Wextra -std=c++17 -pthread -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls   -std=gnu++17 -o CMakeFiles/server.dir/server.cpp.o -c /home/wuchengen/Desktop/MyWebserver/test/server.cpp",
   "file": "/home/wuchengen/Desktop/MyWebserver/test/server.cpp"
 }
 ]

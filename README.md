@@ -173,3 +173,14 @@ void wait( std::unique_lock< std::mutex >& lock, Predicate pred );其中第一�
 #### day10
 
 今天的学习中，我们采取了主Reactor和子Reactor分离的设计模式，将线程池从Eventloop中脱离出来，它的生命周期应该由Server来管理，我们设计了一个Vector来存放subReactor---Eventloop,每个线程的任务将会是Eventloop的Pool.
+
+
+------
+
+#### day11
+
+###### 1、为什么要禁止类的复制构造函数和赋值运算符？
+
+###### 2、C++ 枚举类型：
+
+

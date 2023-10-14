@@ -3,7 +3,6 @@
 #include <stdexcept>
 #define OS_LINUX
 
-
 #define DISALLOW_COPY(cname)  \
     cname(const cname &) = delete;  \
     cname &operator =(const cname &) = delete;

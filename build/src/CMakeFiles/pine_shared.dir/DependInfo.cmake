@@ -16,7 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/wuchengen/Desktop/MyWebserver/src/ThreadPool.cpp" "/home/wuchengen/Desktop/MyWebserver/build/src/CMakeFiles/pine_shared.dir/ThreadPool.cpp.o"
   "/home/wuchengen/Desktop/MyWebserver/src/util.cpp" "/home/wuchengen/Desktop/MyWebserver/build/src/CMakeFiles/pine_shared.dir/util.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
