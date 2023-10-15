@@ -14,6 +14,16 @@ int main(int argc, const char **argv) {
   Eventloop *acceptLoop = new Eventloop();
 
   Server *server = new Server(acceptLoop);
+  server->OnConnect([](Connection *conn){
+    conn->Read();
+    if (conn->GetState() == Connection::Closed)
+    {
+      conn->Close();
+      return;
+    }
+    conn->SetSendBuffer(conn->ReadBuffer());
+    conn->Write();  
+  });
   acceptLoop->loop(); //  不断处理事件
   delete server;
   delete acceptLoop;

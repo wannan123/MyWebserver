@@ -4,6 +4,7 @@
 #include "Eventloop.h"
 #include "Socket.h"
 #include "ThreadPool.h"
+#include "Marcros.h"
 #include <functional>
 #include <map>
 #include <vector>
@@ -14,6 +15,7 @@ private:
   std::vector<Eventloop *> subReactors;
   std::map<int, Connection *> connections;
   ThreadPool *threads;
+  std::function<void(Connection *)> connectCallback;
 
 public:
   Server(Eventloop *);
@@ -21,4 +23,6 @@ public:
   // void handleReadEvent(int);
   void newConnection(Socket *serv_sock);
   void deleteConnection(int sockfd);
+  void OnConnect(std::function<void(Connection *)> cb);
+  DISALLOW_COPY_AND_MOVE(Server);
 };

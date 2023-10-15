@@ -10,6 +10,7 @@ src/CMakeFiles/pine_shared.dir/Acceptor.cpp.o
  /home/wuchengen/Desktop/MyWebserver/src/include/Epoll.h
  /home/wuchengen/Desktop/MyWebserver/src/include/Eventloop.h
  /home/wuchengen/Desktop/MyWebserver/src/include/InetAddress.h
+ /home/wuchengen/Desktop/MyWebserver/src/include/Marcros.h
  /home/wuchengen/Desktop/MyWebserver/src/include/Server.h
  /home/wuchengen/Desktop/MyWebserver/src/include/Socket.h
  /home/wuchengen/Desktop/MyWebserver/src/include/ThreadPool.h
@@ -23,6 +24,8 @@ src/CMakeFiles/pine_shared.dir/Channel.cpp.o
  /home/wuchengen/Desktop/MyWebserver/src/include/Eventloop.h
  /home/wuchengen/Desktop/MyWebserver/src/include/ThreadPool.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o
+ ../src/include/Connection.h
+ ../src/include/Marcros.h
  /home/wuchengen/Desktop/MyWebserver/src/Connection.cpp
  /home/wuchengen/Desktop/MyWebserver/src/include/Buffer.h
  /home/wuchengen/Desktop/MyWebserver/src/include/Channel.h
@@ -51,6 +54,7 @@ src/CMakeFiles/pine_shared.dir/InetAddress.cpp.o
  /home/wuchengen/Desktop/MyWebserver/src/InetAddress.cpp
  /home/wuchengen/Desktop/MyWebserver/src/include/InetAddress.h
 src/CMakeFiles/pine_shared.dir/Server.cpp.o
+ ../src/include/Server.h
  /home/wuchengen/Desktop/MyWebserver/src/Server.cpp
  /home/wuchengen/Desktop/MyWebserver/src/include/Acceptor.h
  /home/wuchengen/Desktop/MyWebserver/src/include/Buffer.h
@@ -59,6 +63,7 @@ src/CMakeFiles/pine_shared.dir/Server.cpp.o
  /home/wuchengen/Desktop/MyWebserver/src/include/Epoll.h
  /home/wuchengen/Desktop/MyWebserver/src/include/Eventloop.h
  /home/wuchengen/Desktop/MyWebserver/src/include/InetAddress.h
+ /home/wuchengen/Desktop/MyWebserver/src/include/Marcros.h
  /home/wuchengen/Desktop/MyWebserver/src/include/Server.h
  /home/wuchengen/Desktop/MyWebserver/src/include/Socket.h
  /home/wuchengen/Desktop/MyWebserver/src/include/ThreadPool.h

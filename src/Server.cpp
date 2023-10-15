@@ -1,5 +1,6 @@
 #include "include/Server.h"
 #include "include/Connection.h"
+#include "Server.h"
 Server::Server(Eventloop *ep) : acceptReactor(ep) {
   acceptor = new Acceptor(acceptReactor);
   std::function<void(Socket *)> cb =
@@ -23,26 +24,18 @@ Server::~Server() {
 }
 
 void Server::newConnection(Socket *serv_sock) {
-  // InetAddress *serv_addr = new InetAddress();
-  // Socket *clnt_sockfd =new Socket(serv_sock->accept(serv_addr));
-  // clnt_sockfd->setnonblocking();
-  // Connection *connect = new Connection(ep, clnt_sockfd);
-  // std::function<void(int)> cb = std::bind(&Server::deleteConnection, this,
-  // std::placeholders::_1); connect->setDeleteConnectionCallback(cb);
-  // connections[clnt_sockfd->getFd()] = connect;
-
   if (serv_sock->getFd() != -1) {
     int random = serv_sock->getFd() % subReactors.size(); //调度策略：全随机
     Connection *conn = new Connection(subReactors[random], serv_sock);
     std::function<void(int)> cb =
         std::bind(&Server::deleteConnection, this, std::placeholders::_1);
     conn->setDeleteConnectionCallback(cb);
+    conn->setConnctionCallback(connectCallback);
     connections[serv_sock->getFd()] = conn;
   }
 }
 
 void Server::deleteConnection(int sockfd) {
-
   if (sockfd != -1) {
     auto it = connections.find(sockfd);
     if (it != connections.end()) {
@@ -51,6 +44,10 @@ void Server::deleteConnection(int sockfd) {
       connections.erase(sockfd);
       close(sockfd); //正常
       delete conn;   // delete conn;         //会Segmant fault
+      conn = nullptr;
     }
   }
+}
+void Server::OnConnect(std::function<void(Connection *)> cb) {
+  connectCallback = cb;
 }

@@ -9,6 +9,7 @@ src/CMakeFiles/pine_shared.dir/Acceptor.cpp.o: ../src/include/Connection.h
 src/CMakeFiles/pine_shared.dir/Acceptor.cpp.o: ../src/include/Epoll.h
 src/CMakeFiles/pine_shared.dir/Acceptor.cpp.o: ../src/include/Eventloop.h
 src/CMakeFiles/pine_shared.dir/Acceptor.cpp.o: ../src/include/InetAddress.h
+src/CMakeFiles/pine_shared.dir/Acceptor.cpp.o: ../src/include/Marcros.h
 src/CMakeFiles/pine_shared.dir/Acceptor.cpp.o: ../src/include/Server.h
 src/CMakeFiles/pine_shared.dir/Acceptor.cpp.o: ../src/include/Socket.h
 src/CMakeFiles/pine_shared.dir/Acceptor.cpp.o: ../src/include/ThreadPool.h
@@ -22,6 +23,8 @@ src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/Channel.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/Eventloop.h
 src/CMakeFiles/pine_shared.dir/Channel.cpp.o: ../src/include/ThreadPool.h
 
+src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../src/include/Connection.h
+src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../src/include/Marcros.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../src/Connection.cpp
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../src/include/Buffer.h
 src/CMakeFiles/pine_shared.dir/Connection.cpp.o: ../src/include/Channel.h
@@ -50,6 +53,7 @@ src/CMakeFiles/pine_shared.dir/Eventloop.cpp.o: ../src/include/util.h
 src/CMakeFiles/pine_shared.dir/InetAddress.cpp.o: ../src/InetAddress.cpp
 src/CMakeFiles/pine_shared.dir/InetAddress.cpp.o: ../src/include/InetAddress.h
 
+src/CMakeFiles/pine_shared.dir/Server.cpp.o: ../src/include/Server.h
 src/CMakeFiles/pine_shared.dir/Server.cpp.o: ../src/Server.cpp
 src/CMakeFiles/pine_shared.dir/Server.cpp.o: ../src/include/Acceptor.h
 src/CMakeFiles/pine_shared.dir/Server.cpp.o: ../src/include/Buffer.h
@@ -58,6 +62,7 @@ src/CMakeFiles/pine_shared.dir/Server.cpp.o: ../src/include/Connection.h
 src/CMakeFiles/pine_shared.dir/Server.cpp.o: ../src/include/Epoll.h
 src/CMakeFiles/pine_shared.dir/Server.cpp.o: ../src/include/Eventloop.h
 src/CMakeFiles/pine_shared.dir/Server.cpp.o: ../src/include/InetAddress.h
+src/CMakeFiles/pine_shared.dir/Server.cpp.o: ../src/include/Marcros.h
 src/CMakeFiles/pine_shared.dir/Server.cpp.o: ../src/include/Server.h
 src/CMakeFiles/pine_shared.dir/Server.cpp.o: ../src/include/Socket.h
 src/CMakeFiles/pine_shared.dir/Server.cpp.o: ../src/include/ThreadPool.h

@@ -8,6 +8,7 @@ test/CMakeFiles/server.dir/server.cpp.o: ../src/include/Connection.h
 test/CMakeFiles/server.dir/server.cpp.o: ../src/include/Epoll.h
 test/CMakeFiles/server.dir/server.cpp.o: ../src/include/Eventloop.h
 test/CMakeFiles/server.dir/server.cpp.o: ../src/include/InetAddress.h
+test/CMakeFiles/server.dir/server.cpp.o: ../src/include/Marcros.h
 test/CMakeFiles/server.dir/server.cpp.o: ../src/include/Server.h
 test/CMakeFiles/server.dir/server.cpp.o: ../src/include/Socket.h
 test/CMakeFiles/server.dir/server.cpp.o: ../src/include/ThreadPool.h

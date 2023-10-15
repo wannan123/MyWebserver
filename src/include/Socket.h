@@ -19,6 +19,8 @@ public:
   void setnonblocking();
   int accept(InetAddress *fd);
   void connect(InetAddress *);
+  void Connect(const char *ip, uint16_t port);
+  bool IsNonBlocking();
   int getFd();
   Socket();
   Socket(int fd);
