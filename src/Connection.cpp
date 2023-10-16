@@ -7,8 +7,6 @@
 Connection::Connection(Eventloop *_loop, Socket *_sock)
     : loop(_loop), sock(_sock), handleChannel(nullptr) {
 
-  state_ = Connected;
-  readBuffer = new Buffer();
     if (loop != nullptr) {
     handleChannel = new Channel(loop, sock->getFd());
     handleChannel->enableReading();
@@ -28,14 +26,19 @@ Connection::~Connection() {
   delete writeBuffer;
 }
 
-void Connection::setDeleteConnectionCallback(std::function<void(int)> _cb) {
+void Connection::setDeleteConnectionCallback(std::function<void(int)>const & _cb) {
   deleteConnectionCallback = _cb;
 }
-void Connection::setConnctionCallback(std::function<void(Connection *)> _cb) {
+void Connection::setConnctionCallback(std::function<void(Connection *)> const &_cb) {
   connectCallback_ = _cb;
+  handleChannel->setReadCallback([this](){ return connectCallback_(this); });
 }
 void Connection::Read() {
-  ASSERT(state_ == State::Connected, "Connnection is disconnected");
+  if (GetState() == Connection::State::Closed)
+  {
+    return;
+  }
+  //ASSERT(state_ == State::Connected, "Connnection is disconnected");
   readBuffer->clear();
   if (sock->IsNonBlocking())
   {
@@ -45,7 +48,11 @@ void Connection::Read() {
   }
 }
 void Connection::Write() {
-  ASSERT(state_ == State::Connected, "connection state is disconnected!");
+  if (GetState() == Connection::State::Closed)
+  {
+    return;
+  }
+  //ASSERT(state_ == State::Connected, "connection state is disconnected!");
   if (sock->IsNonBlocking()) {
     WriteNonBlocking();
   } else {
@@ -62,41 +69,33 @@ Buffer *Connection::GetReadBuffer() { return readBuffer; }
 Buffer *Connection::GetWriteBuffer() { return writeBuffer; }
 
 Connection::State Connection::GetState() { return state_; }
+Socket* Connection::getSocket() { return sock; }
 
-void Connection::Close() { deleteConnectionCallback(sock->getFd()); }
-
+void Connection::Close() { 
+  deleteConnectionCallback(sock->getFd()); 
+  state_ = State::Closed;
+}
 void Connection::ReadNonBlocking() {
-  int fd = sock->getFd();
-  char buffer[1024];
-  while (true) {
-    memset(buffer, '\0', sizeof(buffer));
-    ssize_t bytes_read = read(fd, buffer, sizeof(buffer));
+  int sockfd = sock->getFd();
+  char buf[1024];  // 这个buf大小无所谓
+  while (true) {   // 使用非阻塞IO，读取客户端buffer，一次读取buf大小数据，直到全部读取完毕
+    memset(buf, 0, sizeof(buf));
+    ssize_t bytes_read = read(sockfd, buf, sizeof(buf));
     if (bytes_read > 0) {
-      readBuffer->append(buffer, bytes_read);
-    } else if (bytes_read == -1 &&
-               errno == EINTR) { //  客户端正常中断、继续读取
-      printf("continue reading");
+      readBuffer->append(buf, bytes_read);
+    } else if (bytes_read == -1 && errno == EINTR) {  // 程序正常中断、继续读取
+      printf("continue reading\n");
       continue;
     } else if (bytes_read == -1 &&
-               ((errno == EAGAIN) ||
-                (errno ==
-                 EWOULDBLOCK))) { //  非阻塞IO，这个条件表示数据全部读取完毕
-      printf("finish reading once\n");
-      printf("message from client fd %d: %s\n", fd, readBuffer->c_str());
-      //  error(write(fd, readBuffer->c_str(), readBuffer->size()) == -1,
-      //  "socket write error");
-      // readBuffer->clear();
+               ((errno == EAGAIN) || (errno == EWOULDBLOCK))) {  // 非阻塞IO，这个条件表示数据全部读取完毕
       break;
-    } else if (bytes_read == 0) { // EOF，客户端断开连接
-      printf("EOF, client fd %d disconnected\n", fd);
-      // close(sockfd),关闭socket会自动将文件描述符从epoll树上移除
-      // deleteConnectionCallback(fd);
-      state_ = Closed;
+    } else if (bytes_read == 0) {  // EOF，客户端断开连接
+      printf("read EOF, client fd %d disconnected\n", sockfd);
+      state_ = State::Closed;
       break;
     } else {
-      printf("Connection reset by peer\n");
-      // 这里关闭和删除逻辑在sever或client实现。deleteConnectionCallback(fd); // 会有bug，注释后单线程无bug
-      state_ = Closed;  // 这里可以改成Faild;
+      printf("Other error on client fd %d\n", sockfd);
+      state_ = State::Closed;
       break;
     }
   }
@@ -113,6 +112,7 @@ void Connection::ReadBlocking() {
   } else if (bytes_read == 0) {
     printf("read EOF, blocking client fd %d disconnected\n", sockfd);
     state_ = State::Closed;
+
   } else if (bytes_read == -1) {
     printf("Other error on blocking client fd %d\n", sockfd);
     state_ = State::Closed;
@@ -143,12 +143,24 @@ void Connection::WriteNonBlocking() {
 }
 void Connection::WriteBlocking() {
   int sockfd = sock->getFd();
-  ssize_t bytes_write = write(sockfd, writeBuffer->c_str(), writeBuffer->size());
+  ssize_t bytes_write = 0;
+  bytes_write = write(sockfd, writeBuffer->c_str(), writeBuffer->size());
+  if (bytes_write == 0)
+  {
+    printf("read EOF, blocking server fd %d disconnected\n", sockfd);
+  }
+  
   if (bytes_write == -1) {
     printf("Other error on blocking client fd %d\n", sockfd);
     state_ = State::Closed;
   }
 }
-void Connection::GetlineSendBuffer() { writeBuffer->getline(); }
+void Connection::GetlineSendBuffer() { 
+  if (GetState() == Connection::State::Closed)
+  {
+    return;
+  }
+  writeBuffer->getline(); 
+}
 
 

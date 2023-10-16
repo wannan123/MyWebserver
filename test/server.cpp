@@ -15,15 +15,17 @@ int main(int argc, const char **argv) {
 
   Server *server = new Server(acceptLoop);
   server->OnConnect([](Connection *conn){
+ 
     conn->Read();
-    if (conn->GetState() == Connection::Closed)
-    {
+    if(conn->GetState() == Connection::State::Closed){
       conn->Close();
       return;
     }
+    std::cout << "Message from client " << conn->getSocket()->getFd() << ": " << conn->ReadBuffer() << std::endl;
     conn->SetSendBuffer(conn->ReadBuffer());
     conn->Write();  
   });
+
   acceptLoop->loop(); //  不断处理事件
   delete server;
   delete acceptLoop;

@@ -41,7 +41,7 @@ void Socket::connect(InetAddress *_addr) {
         break;
       }
       if (ret == -1 && (errno == EINPROGRESS)) {
-        continue;
+        continue;    
         /* 连接非阻塞式sockfd建议的做法：
             The socket is nonblocking and the connection cannot be
           completed immediately.  (UNIX domain sockets failed with
@@ -61,7 +61,7 @@ void Socket::connect(InetAddress *_addr) {
       }
     }
   } else {
-    error(::connect(sockfd, (sockaddr *)&tmp_addr, sizeof(tmp_addr)) == -1, "socket connect error");
+    error(::connect(sockfd, (sockaddr *)&tmp_addr, sizeof(tmp_addr)), "socket connect error");
   }
 }
 void Socket::Connect(const char *ip, uint16_t port) {

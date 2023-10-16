@@ -18,8 +18,8 @@ public:
   };
   Connection(Eventloop *_loop, Socket *_sock);
   ~Connection();
-  void setDeleteConnectionCallback(std::function<void(int)> _cb);
-  void setConnctionCallback(std::function<void(Connection *)> _cb);
+  void setDeleteConnectionCallback(std::function<void(int)> const & _cb);
+  void setConnctionCallback(std::function<void(Connection *)> const &_cb);
 
   void Read();
   void Write();
@@ -38,16 +38,17 @@ public:
   void GetlineSendBuffer();
 
   State GetState();
+  Socket* getSocket();
   void Close();
 
 private:
   Eventloop *loop;
   Socket *sock;
-  Channel *handleChannel;
+  Channel *handleChannel{nullptr};
   std::function<void(int)> deleteConnectionCallback;
   std::function<void(Connection *)> connectCallback_;
-  Buffer *readBuffer;
-  Buffer *writeBuffer;
+  Buffer *readBuffer{nullptr};
+  Buffer *writeBuffer{nullptr};
   DISALLOW_COPY_AND_MOVE(Connection);  // 禁止拷贝和移动构造；
   State state_{State::Invalid};
 };

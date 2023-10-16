@@ -8,11 +8,11 @@ void Print(int a, double b, const char *c, std::string const &d) { std::cout << 
 void Test() { std::cout << "hellp" << std::endl; }
 
 int main(int argc, char const *argv[]) {
-  ThreadPool *poll = new ThreadPool();
+  ThreadPool *poll = new ThreadPool(10);
   std::function<void()> func = std::bind(Print, 1, 3.14, "hello", std::string("world"));
-  poll->Add(func);
+  poll->add(func);
   func = Test;
-  poll->Add(func);
+  poll->add(func);
   delete poll;
   return 0;
 }

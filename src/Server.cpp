@@ -19,7 +19,6 @@ Server::Server(Eventloop *ep) : acceptReactor(ep) {
 
 Server::~Server() {
   delete acceptor;
-  delete acceptReactor;
   delete threads;
 }
 
@@ -42,12 +41,12 @@ void Server::deleteConnection(int sockfd) {
       Connection *conn = connections[sockfd];
 
       connections.erase(sockfd);
-      close(sockfd); //正常
-      delete conn;   // delete conn;         //会Segmant fault
+      //close(sockfd); //正常
+      //delete conn;   // delete conn;         //会Segmant fault
       conn = nullptr;
     }
   }
 }
 void Server::OnConnect(std::function<void(Connection *)> cb) {
-  connectCallback = cb;
+  connectCallback = std::move(cb);
 }

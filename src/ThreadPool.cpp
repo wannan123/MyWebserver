@@ -39,11 +39,9 @@ ThreadPool::~ThreadPool() {
     stop = true;
   }
   cv.notify_all();
-  // std::cout<<"kakakaka"<<endl;
-  std::for_each(threads.begin(), threads.end(),
-                [](std::thread &t) { t.join(); });
-  // for(std::thread &th : threads){
-  //     if(th.joinable())
-  //         th.join();
-  // }
+  for (std::thread &th : threads) {
+    if (th.joinable()) {
+      th.join();
+    }
+  }
 }
