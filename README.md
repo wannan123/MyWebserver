@@ -179,8 +179,14 @@ void wait( std::unique_lock< std::mutex >& lock, Predicate pred );其中第一�
 
 #### day11
 
+这一次的学习中，我们将Connection类完善化，将echo的逻辑呈现在server里通过lamda构造回调函数给Connection然后通过setOnConnection将逻辑设计到channel中，最后当Epool循环时通过handle来调用，本次学习的bug可谓是说不尽了，教程中的源码也有很多错误，我们要注意，client是不能调用Close()的，Close是服务器调用的，客户端只能监听。另外我们学习了宏语法，以及如何禁止复制构造或者移动构造
+
 ###### 1、为什么要禁止类的复制构造函数和赋值运算符？
 
+默认生成的拷贝构造函数，会直接拷贝buf_的值，导致两个Widget对象指向同一个缓 冲区，这会导致析构的时候两次删除同一片区域的问题（这个问题又叫双杀问题）
+
 ###### 2、C++ 枚举类型：
+
+答：枚举类型 (enumeration)是 C++ 中的一种派生数据类型，它是由用户定义的若干枚举常量的集合，我们通常利用枚举类型来定义一个对象的状态。
 
 
