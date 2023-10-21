@@ -2,14 +2,15 @@
 #include "include/Server.h"
 Acceptor::Acceptor(Eventloop *ep) : loop(ep) {
   sock = new Socket();
-  InetAddress *addr = new InetAddress("127.0.0.1", 8000);
+  InetAddress *addr = new InetAddress("127.0.0.1", 8800);
   sock->bind(addr);
   // sock->setnonblocking();
   sock->listen();
   acceptChannel = new Channel(loop, sock->getFd());
+
   std::function<void()> cb = std::bind(&Acceptor::acceptConnection, this);
   acceptChannel->setReadCallback(cb);
-  acceptChannel->enableReading();
+  acceptChannel->EnableReading();
   delete addr;
 }
 

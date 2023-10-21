@@ -9,9 +9,11 @@
 /home/wuchengen/Desktop/MyWebserver/build/src/CMakeFiles/pine_shared.dir
 /home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/rebuild_cache.dir
 /home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/edit_cache.dir
+/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/echo_server.dir
+/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/echo_clients.dir
 /home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/thread_test.dir
-/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/single_client.dir
-/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/multiple_client.dir
+/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/echo_client.dir
+/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/chat_server.dir
+/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/chat_client.dir
 /home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/check-tests.dir
-/home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/server.dir
 /home/wuchengen/Desktop/MyWebserver/build/test/CMakeFiles/build-tests.dir

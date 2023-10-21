@@ -109,22 +109,9 @@ src/CMakeFiles/pine_shared.dir/Connection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pine_shared.dir/Connection.cpp.s"
 	cd /home/wuchengen/Desktop/MyWebserver/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wuchengen/Desktop/MyWebserver/src/Connection.cpp -o CMakeFiles/pine_shared.dir/Connection.cpp.s
 
-src/CMakeFiles/pine_shared.dir/Epoll.cpp.o: src/CMakeFiles/pine_shared.dir/flags.make
-src/CMakeFiles/pine_shared.dir/Epoll.cpp.o: ../src/Epoll.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/pine_shared.dir/Epoll.cpp.o"
-	cd /home/wuchengen/Desktop/MyWebserver/build/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pine_shared.dir/Epoll.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Epoll.cpp
-
-src/CMakeFiles/pine_shared.dir/Epoll.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pine_shared.dir/Epoll.cpp.i"
-	cd /home/wuchengen/Desktop/MyWebserver/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wuchengen/Desktop/MyWebserver/src/Epoll.cpp > CMakeFiles/pine_shared.dir/Epoll.cpp.i
-
-src/CMakeFiles/pine_shared.dir/Epoll.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pine_shared.dir/Epoll.cpp.s"
-	cd /home/wuchengen/Desktop/MyWebserver/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wuchengen/Desktop/MyWebserver/src/Epoll.cpp -o CMakeFiles/pine_shared.dir/Epoll.cpp.s
-
 src/CMakeFiles/pine_shared.dir/Eventloop.cpp.o: src/CMakeFiles/pine_shared.dir/flags.make
 src/CMakeFiles/pine_shared.dir/Eventloop.cpp.o: ../src/Eventloop.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/pine_shared.dir/Eventloop.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/pine_shared.dir/Eventloop.cpp.o"
 	cd /home/wuchengen/Desktop/MyWebserver/build/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pine_shared.dir/Eventloop.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Eventloop.cpp
 
 src/CMakeFiles/pine_shared.dir/Eventloop.cpp.i: cmake_force
@@ -137,7 +124,7 @@ src/CMakeFiles/pine_shared.dir/Eventloop.cpp.s: cmake_force
 
 src/CMakeFiles/pine_shared.dir/InetAddress.cpp.o: src/CMakeFiles/pine_shared.dir/flags.make
 src/CMakeFiles/pine_shared.dir/InetAddress.cpp.o: ../src/InetAddress.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/pine_shared.dir/InetAddress.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/pine_shared.dir/InetAddress.cpp.o"
 	cd /home/wuchengen/Desktop/MyWebserver/build/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pine_shared.dir/InetAddress.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/InetAddress.cpp
 
 src/CMakeFiles/pine_shared.dir/InetAddress.cpp.i: cmake_force
@@ -147,6 +134,19 @@ src/CMakeFiles/pine_shared.dir/InetAddress.cpp.i: cmake_force
 src/CMakeFiles/pine_shared.dir/InetAddress.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pine_shared.dir/InetAddress.cpp.s"
 	cd /home/wuchengen/Desktop/MyWebserver/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wuchengen/Desktop/MyWebserver/src/InetAddress.cpp -o CMakeFiles/pine_shared.dir/InetAddress.cpp.s
+
+src/CMakeFiles/pine_shared.dir/Poller.cpp.o: src/CMakeFiles/pine_shared.dir/flags.make
+src/CMakeFiles/pine_shared.dir/Poller.cpp.o: ../src/Poller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuchengen/Desktop/MyWebserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/pine_shared.dir/Poller.cpp.o"
+	cd /home/wuchengen/Desktop/MyWebserver/build/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pine_shared.dir/Poller.cpp.o -c /home/wuchengen/Desktop/MyWebserver/src/Poller.cpp
+
+src/CMakeFiles/pine_shared.dir/Poller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pine_shared.dir/Poller.cpp.i"
+	cd /home/wuchengen/Desktop/MyWebserver/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wuchengen/Desktop/MyWebserver/src/Poller.cpp > CMakeFiles/pine_shared.dir/Poller.cpp.i
+
+src/CMakeFiles/pine_shared.dir/Poller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pine_shared.dir/Poller.cpp.s"
+	cd /home/wuchengen/Desktop/MyWebserver/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wuchengen/Desktop/MyWebserver/src/Poller.cpp -o CMakeFiles/pine_shared.dir/Poller.cpp.s
 
 src/CMakeFiles/pine_shared.dir/Server.cpp.o: src/CMakeFiles/pine_shared.dir/flags.make
 src/CMakeFiles/pine_shared.dir/Server.cpp.o: ../src/Server.cpp
@@ -206,9 +206,9 @@ pine_shared_OBJECTS = \
 "CMakeFiles/pine_shared.dir/Buffer.cpp.o" \
 "CMakeFiles/pine_shared.dir/Channel.cpp.o" \
 "CMakeFiles/pine_shared.dir/Connection.cpp.o" \
-"CMakeFiles/pine_shared.dir/Epoll.cpp.o" \
 "CMakeFiles/pine_shared.dir/Eventloop.cpp.o" \
 "CMakeFiles/pine_shared.dir/InetAddress.cpp.o" \
+"CMakeFiles/pine_shared.dir/Poller.cpp.o" \
 "CMakeFiles/pine_shared.dir/Server.cpp.o" \
 "CMakeFiles/pine_shared.dir/Socket.cpp.o" \
 "CMakeFiles/pine_shared.dir/ThreadPool.cpp.o" \
@@ -221,9 +221,9 @@ lib/libpine_shared.so: src/CMakeFiles/pine_shared.dir/Acceptor.cpp.o
 lib/libpine_shared.so: src/CMakeFiles/pine_shared.dir/Buffer.cpp.o
 lib/libpine_shared.so: src/CMakeFiles/pine_shared.dir/Channel.cpp.o
 lib/libpine_shared.so: src/CMakeFiles/pine_shared.dir/Connection.cpp.o
-lib/libpine_shared.so: src/CMakeFiles/pine_shared.dir/Epoll.cpp.o
 lib/libpine_shared.so: src/CMakeFiles/pine_shared.dir/Eventloop.cpp.o
 lib/libpine_shared.so: src/CMakeFiles/pine_shared.dir/InetAddress.cpp.o
+lib/libpine_shared.so: src/CMakeFiles/pine_shared.dir/Poller.cpp.o
 lib/libpine_shared.so: src/CMakeFiles/pine_shared.dir/Server.cpp.o
 lib/libpine_shared.so: src/CMakeFiles/pine_shared.dir/Socket.cpp.o
 lib/libpine_shared.so: src/CMakeFiles/pine_shared.dir/ThreadPool.cpp.o

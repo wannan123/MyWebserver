@@ -1,6 +1,11 @@
 #include "include/Channel.h"
 #include "include/Eventloop.h"
 #include <unistd.h>
+#include "Channel.h"
+const int Channel::READ_EVENT = 1;
+const int Channel::WRITE_EVENT = 2;
+const int Channel::ET = 4;
+
 void Channel::handleEvent() {
   if (revents & (EPOLLIN | EPOLLPRI)) {
     readCallback();
@@ -10,15 +15,21 @@ void Channel::handleEvent() {
   } // callback();
 }
 void Channel::setReadCallback(std::function<void()> cb) { readCallback = cb; }
-void Channel::enableReading() {
-  events = EPOLLIN | EPOLLPRI;
+void Channel::EnableReading() {
+  events |= READ_EVENT;
+  ep->updateChannel(this);
+}
+void Channel::EnableWriting() {
+  events |= WRITE_EVENT;
   ep->updateChannel(this);
 }
 
+
 void Channel::useET() {
-  events |= EPOLLET;
+  events |= ET;
   ep->updateChannel(this);
 }
+
 
 int Channel::getFd() { return fd; }
 
@@ -30,7 +41,20 @@ bool Channel::getInEpoll() { return inEpoll; }
 
 void Channel::setEpoll() { inEpoll = true; }
 
-void Channel::setRevents(uint32_t revent) { revents = revent; }
+void Channel::setRevents(int event) { 
+  if (event & Channel::READ_EVENT)
+  {
+    revents |= READ_EVENT;
+  }
+  if (event & Channel::WRITE_EVENT)
+  {
+    revents |= WRITE_EVENT;
+  }
+  if (event & Channel::ET)
+  {
+    revents |= ET;
+  }
+}
 void Channel::setEvents(uint32_t event) { events = event; }
 Channel::Channel(Eventloop *ep, int fd)
     : ep(ep), fd(fd), events(0), revents(0), inEpoll(false) {}

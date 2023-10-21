@@ -9,7 +9,7 @@ Connection::Connection(Eventloop *_loop, Socket *_sock)
 
     if (loop != nullptr) {
     handleChannel = new Channel(loop, sock->getFd());
-    handleChannel->enableReading();
+    handleChannel->EnableReading();
     handleChannel->useET();
   }
   readBuffer = new Buffer();

@@ -16,16 +16,20 @@ private:
   std::function<void()> writeCallback;
 
 public:
+  static const int READ_EVENT;
+  static const int WRITE_EVENT;
+  static const int ET;
   void handleEvent();
   void setReadCallback(std::function<void()> cb);
-  void enableReading();
+  void EnableWriting();
+  void EnableReading();
   void useET();
   int getFd();
   uint32_t getEvent();
   uint32_t getRevents();
   bool getInEpoll();
   void setEpoll();
-  void setRevents(uint32_t revent);
+  void setRevents(int event);
   void setEvents(uint32_t event);
   Channel(Eventloop *ep, int fd);
   ~Channel();

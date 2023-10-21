@@ -176,6 +176,32 @@ pine_shared/fast:
 .PHONY : pine_shared/fast
 
 #=============================================================================
+# Target rules for targets named echo_server
+
+# Build rule for target.
+echo_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 echo_server
+.PHONY : echo_server
+
+# fast build rule for target.
+echo_server/fast:
+	$(MAKE) -f test/CMakeFiles/echo_server.dir/build.make test/CMakeFiles/echo_server.dir/build
+.PHONY : echo_server/fast
+
+#=============================================================================
+# Target rules for targets named echo_clients
+
+# Build rule for target.
+echo_clients: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 echo_clients
+.PHONY : echo_clients
+
+# fast build rule for target.
+echo_clients/fast:
+	$(MAKE) -f test/CMakeFiles/echo_clients.dir/build.make test/CMakeFiles/echo_clients.dir/build
+.PHONY : echo_clients/fast
+
+#=============================================================================
 # Target rules for targets named thread_test
 
 # Build rule for target.
@@ -189,30 +215,43 @@ thread_test/fast:
 .PHONY : thread_test/fast
 
 #=============================================================================
-# Target rules for targets named single_client
+# Target rules for targets named echo_client
 
 # Build rule for target.
-single_client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 single_client
-.PHONY : single_client
+echo_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 echo_client
+.PHONY : echo_client
 
 # fast build rule for target.
-single_client/fast:
-	$(MAKE) -f test/CMakeFiles/single_client.dir/build.make test/CMakeFiles/single_client.dir/build
-.PHONY : single_client/fast
+echo_client/fast:
+	$(MAKE) -f test/CMakeFiles/echo_client.dir/build.make test/CMakeFiles/echo_client.dir/build
+.PHONY : echo_client/fast
 
 #=============================================================================
-# Target rules for targets named multiple_client
+# Target rules for targets named chat_server
 
 # Build rule for target.
-multiple_client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 multiple_client
-.PHONY : multiple_client
+chat_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chat_server
+.PHONY : chat_server
 
 # fast build rule for target.
-multiple_client/fast:
-	$(MAKE) -f test/CMakeFiles/multiple_client.dir/build.make test/CMakeFiles/multiple_client.dir/build
-.PHONY : multiple_client/fast
+chat_server/fast:
+	$(MAKE) -f test/CMakeFiles/chat_server.dir/build.make test/CMakeFiles/chat_server.dir/build
+.PHONY : chat_server/fast
+
+#=============================================================================
+# Target rules for targets named chat_client
+
+# Build rule for target.
+chat_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chat_client
+.PHONY : chat_client
+
+# fast build rule for target.
+chat_client/fast:
+	$(MAKE) -f test/CMakeFiles/chat_client.dir/build.make test/CMakeFiles/chat_client.dir/build
+.PHONY : chat_client/fast
 
 #=============================================================================
 # Target rules for targets named check-tests
@@ -226,19 +265,6 @@ check-tests: cmake_check_build_system
 check-tests/fast:
 	$(MAKE) -f test/CMakeFiles/check-tests.dir/build.make test/CMakeFiles/check-tests.dir/build
 .PHONY : check-tests/fast
-
-#=============================================================================
-# Target rules for targets named server
-
-# Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 server
-.PHONY : server
-
-# fast build rule for target.
-server/fast:
-	$(MAKE) -f test/CMakeFiles/server.dir/build.make test/CMakeFiles/server.dir/build
-.PHONY : server/fast
 
 #=============================================================================
 # Target rules for targets named build-tests
@@ -266,11 +292,13 @@ help:
 	@echo "... check-format"
 	@echo "... format"
 	@echo "... pine_shared"
+	@echo "... echo_server"
+	@echo "... echo_clients"
 	@echo "... thread_test"
-	@echo "... single_client"
-	@echo "... multiple_client"
+	@echo "... echo_client"
+	@echo "... chat_server"
+	@echo "... chat_client"
 	@echo "... check-tests"
-	@echo "... server"
 	@echo "... build-tests"
 .PHONY : help
 

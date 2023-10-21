@@ -31,6 +31,9 @@ void Server::newConnection(Socket *serv_sock) {
     conn->setDeleteConnectionCallback(cb);
     conn->setConnctionCallback(connectCallback);
     connections[serv_sock->getFd()] = conn;
+    if(newConnectionFunc){
+      newConnectionFunc(conn);
+    }
   }
 }
 
@@ -49,4 +52,8 @@ void Server::deleteConnection(int sockfd) {
 }
 void Server::OnConnect(std::function<void(Connection *)> cb) {
   connectCallback = std::move(cb);
+}
+
+void Server::SetNewConnect(std::function<void(Connection *)> cb) {
+  newConnectionFunc = std::move(cb);
 }

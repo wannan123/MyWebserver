@@ -1,10 +1,10 @@
 #pragma once
 #include "ThreadPool.h"
 class Channel;
-class Epoll;
+class Poller;
 class Eventloop {
 private:
-  Epoll *ep_;
+  Poller *ep_;
   bool quit;
 
 public:

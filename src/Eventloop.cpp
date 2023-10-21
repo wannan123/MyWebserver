@@ -1,11 +1,13 @@
 #include "include/Eventloop.h"
 #include "include/Channel.h"
-#include "include/Epoll.h"
+#include "include/Poller.h"
 #include "include/ThreadPool.h"
 #include <vector>
-Eventloop::Eventloop() : ep_(nullptr), quit(false) { ep_ = new Epoll(); }
+Eventloop::Eventloop() : ep_(nullptr), quit(false) { ep_ = new Poller(); }
 
-Eventloop::~Eventloop() { delete ep_; }
+Eventloop::~Eventloop() { 
+  // delete ep_; 
+}
 
 void Eventloop::loop() {
   while (!quit) {

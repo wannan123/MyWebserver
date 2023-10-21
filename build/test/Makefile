@@ -111,6 +111,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test/CMakeFiles/echo_server.dir/rule:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/echo_server.dir/rule
+.PHONY : test/CMakeFiles/echo_server.dir/rule
+
+# Convenience name for target.
+echo_server: test/CMakeFiles/echo_server.dir/rule
+
+.PHONY : echo_server
+
+# fast build rule for target.
+echo_server/fast:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/echo_server.dir/build.make test/CMakeFiles/echo_server.dir/build
+.PHONY : echo_server/fast
+
+# Convenience name for target.
+test/CMakeFiles/echo_clients.dir/rule:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/echo_clients.dir/rule
+.PHONY : test/CMakeFiles/echo_clients.dir/rule
+
+# Convenience name for target.
+echo_clients: test/CMakeFiles/echo_clients.dir/rule
+
+.PHONY : echo_clients
+
+# fast build rule for target.
+echo_clients/fast:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/echo_clients.dir/build.make test/CMakeFiles/echo_clients.dir/build
+.PHONY : echo_clients/fast
+
+# Convenience name for target.
 test/CMakeFiles/thread_test.dir/rule:
 	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/thread_test.dir/rule
 .PHONY : test/CMakeFiles/thread_test.dir/rule
@@ -126,34 +156,49 @@ thread_test/fast:
 .PHONY : thread_test/fast
 
 # Convenience name for target.
-test/CMakeFiles/single_client.dir/rule:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/single_client.dir/rule
-.PHONY : test/CMakeFiles/single_client.dir/rule
+test/CMakeFiles/echo_client.dir/rule:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/echo_client.dir/rule
+.PHONY : test/CMakeFiles/echo_client.dir/rule
 
 # Convenience name for target.
-single_client: test/CMakeFiles/single_client.dir/rule
+echo_client: test/CMakeFiles/echo_client.dir/rule
 
-.PHONY : single_client
+.PHONY : echo_client
 
 # fast build rule for target.
-single_client/fast:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/single_client.dir/build.make test/CMakeFiles/single_client.dir/build
-.PHONY : single_client/fast
+echo_client/fast:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/echo_client.dir/build.make test/CMakeFiles/echo_client.dir/build
+.PHONY : echo_client/fast
 
 # Convenience name for target.
-test/CMakeFiles/multiple_client.dir/rule:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/multiple_client.dir/rule
-.PHONY : test/CMakeFiles/multiple_client.dir/rule
+test/CMakeFiles/chat_server.dir/rule:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/chat_server.dir/rule
+.PHONY : test/CMakeFiles/chat_server.dir/rule
 
 # Convenience name for target.
-multiple_client: test/CMakeFiles/multiple_client.dir/rule
+chat_server: test/CMakeFiles/chat_server.dir/rule
 
-.PHONY : multiple_client
+.PHONY : chat_server
 
 # fast build rule for target.
-multiple_client/fast:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/multiple_client.dir/build.make test/CMakeFiles/multiple_client.dir/build
-.PHONY : multiple_client/fast
+chat_server/fast:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/chat_server.dir/build.make test/CMakeFiles/chat_server.dir/build
+.PHONY : chat_server/fast
+
+# Convenience name for target.
+test/CMakeFiles/chat_client.dir/rule:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/chat_client.dir/rule
+.PHONY : test/CMakeFiles/chat_client.dir/rule
+
+# Convenience name for target.
+chat_client: test/CMakeFiles/chat_client.dir/rule
+
+.PHONY : chat_client
+
+# fast build rule for target.
+chat_client/fast:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/chat_client.dir/build.make test/CMakeFiles/chat_client.dir/build
+.PHONY : chat_client/fast
 
 # Convenience name for target.
 test/CMakeFiles/check-tests.dir/rule:
@@ -171,21 +216,6 @@ check-tests/fast:
 .PHONY : check-tests/fast
 
 # Convenience name for target.
-test/CMakeFiles/server.dir/rule:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/server.dir/rule
-.PHONY : test/CMakeFiles/server.dir/rule
-
-# Convenience name for target.
-server: test/CMakeFiles/server.dir/rule
-
-.PHONY : server
-
-# fast build rule for target.
-server/fast:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/server.dir/build.make test/CMakeFiles/server.dir/build
-.PHONY : server/fast
-
-# Convenience name for target.
 test/CMakeFiles/build-tests.dir/rule:
 	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/build-tests.dir/rule
 .PHONY : test/CMakeFiles/build-tests.dir/rule
@@ -200,86 +230,140 @@ build-tests/fast:
 	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/build-tests.dir/build.make test/CMakeFiles/build-tests.dir/build
 .PHONY : build-tests/fast
 
-multiple_client.o: multiple_client.cpp.o
+chat_client.o: chat_client.cpp.o
 
-.PHONY : multiple_client.o
-
-# target to build an object file
-multiple_client.cpp.o:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/multiple_client.dir/build.make test/CMakeFiles/multiple_client.dir/multiple_client.cpp.o
-.PHONY : multiple_client.cpp.o
-
-multiple_client.i: multiple_client.cpp.i
-
-.PHONY : multiple_client.i
-
-# target to preprocess a source file
-multiple_client.cpp.i:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/multiple_client.dir/build.make test/CMakeFiles/multiple_client.dir/multiple_client.cpp.i
-.PHONY : multiple_client.cpp.i
-
-multiple_client.s: multiple_client.cpp.s
-
-.PHONY : multiple_client.s
-
-# target to generate assembly for a file
-multiple_client.cpp.s:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/multiple_client.dir/build.make test/CMakeFiles/multiple_client.dir/multiple_client.cpp.s
-.PHONY : multiple_client.cpp.s
-
-server.o: server.cpp.o
-
-.PHONY : server.o
+.PHONY : chat_client.o
 
 # target to build an object file
-server.cpp.o:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/server.dir/build.make test/CMakeFiles/server.dir/server.cpp.o
-.PHONY : server.cpp.o
+chat_client.cpp.o:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/chat_client.dir/build.make test/CMakeFiles/chat_client.dir/chat_client.cpp.o
+.PHONY : chat_client.cpp.o
 
-server.i: server.cpp.i
+chat_client.i: chat_client.cpp.i
 
-.PHONY : server.i
+.PHONY : chat_client.i
 
 # target to preprocess a source file
-server.cpp.i:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/server.dir/build.make test/CMakeFiles/server.dir/server.cpp.i
-.PHONY : server.cpp.i
+chat_client.cpp.i:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/chat_client.dir/build.make test/CMakeFiles/chat_client.dir/chat_client.cpp.i
+.PHONY : chat_client.cpp.i
 
-server.s: server.cpp.s
+chat_client.s: chat_client.cpp.s
 
-.PHONY : server.s
+.PHONY : chat_client.s
 
 # target to generate assembly for a file
-server.cpp.s:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/server.dir/build.make test/CMakeFiles/server.dir/server.cpp.s
-.PHONY : server.cpp.s
+chat_client.cpp.s:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/chat_client.dir/build.make test/CMakeFiles/chat_client.dir/chat_client.cpp.s
+.PHONY : chat_client.cpp.s
 
-single_client.o: single_client.cpp.o
+chat_server.o: chat_server.cpp.o
 
-.PHONY : single_client.o
+.PHONY : chat_server.o
 
 # target to build an object file
-single_client.cpp.o:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/single_client.dir/build.make test/CMakeFiles/single_client.dir/single_client.cpp.o
-.PHONY : single_client.cpp.o
+chat_server.cpp.o:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/chat_server.dir/build.make test/CMakeFiles/chat_server.dir/chat_server.cpp.o
+.PHONY : chat_server.cpp.o
 
-single_client.i: single_client.cpp.i
+chat_server.i: chat_server.cpp.i
 
-.PHONY : single_client.i
+.PHONY : chat_server.i
 
 # target to preprocess a source file
-single_client.cpp.i:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/single_client.dir/build.make test/CMakeFiles/single_client.dir/single_client.cpp.i
-.PHONY : single_client.cpp.i
+chat_server.cpp.i:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/chat_server.dir/build.make test/CMakeFiles/chat_server.dir/chat_server.cpp.i
+.PHONY : chat_server.cpp.i
 
-single_client.s: single_client.cpp.s
+chat_server.s: chat_server.cpp.s
 
-.PHONY : single_client.s
+.PHONY : chat_server.s
 
 # target to generate assembly for a file
-single_client.cpp.s:
-	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/single_client.dir/build.make test/CMakeFiles/single_client.dir/single_client.cpp.s
-.PHONY : single_client.cpp.s
+chat_server.cpp.s:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/chat_server.dir/build.make test/CMakeFiles/chat_server.dir/chat_server.cpp.s
+.PHONY : chat_server.cpp.s
+
+echo_client.o: echo_client.cpp.o
+
+.PHONY : echo_client.o
+
+# target to build an object file
+echo_client.cpp.o:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/echo_client.dir/build.make test/CMakeFiles/echo_client.dir/echo_client.cpp.o
+.PHONY : echo_client.cpp.o
+
+echo_client.i: echo_client.cpp.i
+
+.PHONY : echo_client.i
+
+# target to preprocess a source file
+echo_client.cpp.i:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/echo_client.dir/build.make test/CMakeFiles/echo_client.dir/echo_client.cpp.i
+.PHONY : echo_client.cpp.i
+
+echo_client.s: echo_client.cpp.s
+
+.PHONY : echo_client.s
+
+# target to generate assembly for a file
+echo_client.cpp.s:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/echo_client.dir/build.make test/CMakeFiles/echo_client.dir/echo_client.cpp.s
+.PHONY : echo_client.cpp.s
+
+echo_clients.o: echo_clients.cpp.o
+
+.PHONY : echo_clients.o
+
+# target to build an object file
+echo_clients.cpp.o:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/echo_clients.dir/build.make test/CMakeFiles/echo_clients.dir/echo_clients.cpp.o
+.PHONY : echo_clients.cpp.o
+
+echo_clients.i: echo_clients.cpp.i
+
+.PHONY : echo_clients.i
+
+# target to preprocess a source file
+echo_clients.cpp.i:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/echo_clients.dir/build.make test/CMakeFiles/echo_clients.dir/echo_clients.cpp.i
+.PHONY : echo_clients.cpp.i
+
+echo_clients.s: echo_clients.cpp.s
+
+.PHONY : echo_clients.s
+
+# target to generate assembly for a file
+echo_clients.cpp.s:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/echo_clients.dir/build.make test/CMakeFiles/echo_clients.dir/echo_clients.cpp.s
+.PHONY : echo_clients.cpp.s
+
+echo_server.o: echo_server.cpp.o
+
+.PHONY : echo_server.o
+
+# target to build an object file
+echo_server.cpp.o:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/echo_server.dir/build.make test/CMakeFiles/echo_server.dir/echo_server.cpp.o
+.PHONY : echo_server.cpp.o
+
+echo_server.i: echo_server.cpp.i
+
+.PHONY : echo_server.i
+
+# target to preprocess a source file
+echo_server.cpp.i:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/echo_server.dir/build.make test/CMakeFiles/echo_server.dir/echo_server.cpp.i
+.PHONY : echo_server.cpp.i
+
+echo_server.s: echo_server.cpp.s
+
+.PHONY : echo_server.s
+
+# target to generate assembly for a file
+echo_server.cpp.s:
+	cd /home/wuchengen/Desktop/MyWebserver/build && $(MAKE) -f test/CMakeFiles/echo_server.dir/build.make test/CMakeFiles/echo_server.dir/echo_server.cpp.s
+.PHONY : echo_server.cpp.s
 
 thread_test.o: thread_test.cpp.o
 
@@ -316,21 +400,29 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... echo_server"
+	@echo "... echo_clients"
 	@echo "... thread_test"
-	@echo "... single_client"
-	@echo "... multiple_client"
+	@echo "... echo_client"
+	@echo "... chat_server"
+	@echo "... chat_client"
 	@echo "... check-tests"
-	@echo "... server"
 	@echo "... build-tests"
-	@echo "... multiple_client.o"
-	@echo "... multiple_client.i"
-	@echo "... multiple_client.s"
-	@echo "... server.o"
-	@echo "... server.i"
-	@echo "... server.s"
-	@echo "... single_client.o"
-	@echo "... single_client.i"
-	@echo "... single_client.s"
+	@echo "... chat_client.o"
+	@echo "... chat_client.i"
+	@echo "... chat_client.s"
+	@echo "... chat_server.o"
+	@echo "... chat_server.i"
+	@echo "... chat_server.s"
+	@echo "... echo_client.o"
+	@echo "... echo_client.i"
+	@echo "... echo_client.s"
+	@echo "... echo_clients.o"
+	@echo "... echo_clients.i"
+	@echo "... echo_clients.s"
+	@echo "... echo_server.o"
+	@echo "... echo_server.i"
+	@echo "... echo_server.s"
 	@echo "... thread_test.o"
 	@echo "... thread_test.i"
 	@echo "... thread_test.s"

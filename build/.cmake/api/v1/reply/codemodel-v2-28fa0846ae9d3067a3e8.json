@@ -1,0 +1,200 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3,
+						5,
+						6,
+						10
+					]
+				},
+				{
+					"build" : "src",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "test",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						4,
+						7,
+						8,
+						9,
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "Pine",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "build-tests::@36f028580bb02cc8272a",
+					"jsonFile" : "target-build-tests-Debug-7cbe4bd74c7a73632ec1.json",
+					"name" : "build-tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "chat_client::@36f028580bb02cc8272a",
+					"jsonFile" : "target-chat_client-Debug-46909529494f8bb9ca51.json",
+					"name" : "chat_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "chat_server::@36f028580bb02cc8272a",
+					"jsonFile" : "target-chat_server-Debug-5cb7feae71b3d95274a6.json",
+					"name" : "chat_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "check-format::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check-format-Debug-e85d5541b900a3d26687.json",
+					"name" : "check-format",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "check-tests::@36f028580bb02cc8272a",
+					"jsonFile" : "target-check-tests-Debug-88cd23f38ee1e40f7f1e.json",
+					"name" : "check-tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "clang-tidy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-clang-tidy-Debug-9795de6682c69d1a79c6.json",
+					"name" : "clang-tidy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cpplint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cpplint-Debug-2da444a5f70103fef85e.json",
+					"name" : "cpplint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "echo_client::@36f028580bb02cc8272a",
+					"jsonFile" : "target-echo_client-Debug-197e33dcd5bcf43154eb.json",
+					"name" : "echo_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "echo_clients::@36f028580bb02cc8272a",
+					"jsonFile" : "target-echo_clients-Debug-6d6cafb2764ad20df702.json",
+					"name" : "echo_clients",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "echo_server::@36f028580bb02cc8272a",
+					"jsonFile" : "target-echo_server-Debug-dabdcf5b47f50f8f1b21.json",
+					"name" : "echo_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "format::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-format-Debug-fe93ce4ac9fed17a502b.json",
+					"name" : "format",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "pine_shared::@145eef247bfb46b6828c",
+					"jsonFile" : "target-pine_shared-Debug-e980c14c43964f83980b.json",
+					"name" : "pine_shared",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "thread_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-thread_test-Debug-7f8c3afd14b5ba264675.json",
+					"name" : "thread_test",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/wuchengen/Desktop/MyWebserver/build",
+		"source" : "/home/wuchengen/Desktop/MyWebserver"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

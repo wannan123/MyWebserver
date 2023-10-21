@@ -4,10 +4,10 @@
 test/CMakeFiles/single_client.dir/single_client.cpp.o: ../src/include/Buffer.h
 test/CMakeFiles/single_client.dir/single_client.cpp.o: ../src/include/Channel.h
 test/CMakeFiles/single_client.dir/single_client.cpp.o: ../src/include/Connection.h
-test/CMakeFiles/single_client.dir/single_client.cpp.o: ../src/include/Epoll.h
 test/CMakeFiles/single_client.dir/single_client.cpp.o: ../src/include/Eventloop.h
 test/CMakeFiles/single_client.dir/single_client.cpp.o: ../src/include/InetAddress.h
 test/CMakeFiles/single_client.dir/single_client.cpp.o: ../src/include/Marcros.h
+test/CMakeFiles/single_client.dir/single_client.cpp.o: ../src/include/Poller.h
 test/CMakeFiles/single_client.dir/single_client.cpp.o: ../src/include/Socket.h
 test/CMakeFiles/single_client.dir/single_client.cpp.o: ../src/include/ThreadPool.h
 test/CMakeFiles/single_client.dir/single_client.cpp.o: ../src/include/util.h

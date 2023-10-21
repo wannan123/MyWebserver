@@ -16,6 +16,7 @@ private:
   std::map<int, Connection *> connections;
   ThreadPool *threads;
   std::function<void(Connection *)> connectCallback;
+  std::function<void(Connection *)> newConnectionFunc;
 
 public:
   Server(Eventloop *);
@@ -24,5 +25,6 @@ public:
   void newConnection(Socket *serv_sock);
   void deleteConnection(int sockfd);
   void OnConnect(std::function<void(Connection *)> cb);
+  void SetNewConnect(std::function<void(Connection *)> cb);
   DISALLOW_COPY_AND_MOVE(Server);
 };

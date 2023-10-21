@@ -1,7 +1,6 @@
 #pragma once
 #include <cassert>
 #include <stdexcept>
-#define OS_LINUX
 
 #define DISALLOW_COPY(cname)  \
     cname(const cname &) = delete;  \

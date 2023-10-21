@@ -1,5 +1,5 @@
 #pragma once
-#include "Epoll.h"
+#include "Poller.h"
 #include "InetAddress.h"
 #include "util.h"
 #include <arpa/inet.h>
@@ -13,7 +13,7 @@ private:
   int sockfd;
 
 public:
-  Epoll *ep;
+  Poller *ep;
   void bind(InetAddress *address);
   void listen();
   void setnonblocking();
